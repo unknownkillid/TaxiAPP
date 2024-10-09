@@ -75,7 +75,7 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    transition: background-image 1.5s ease-in-out;
+    transition: background-image 1s ease-in-out;
     position: relative;
 }
 
