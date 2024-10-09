@@ -8,6 +8,7 @@
     position: fixed;
     width: 100%;
     z-index: 200;
+    font-family: var(--main-georgin-font);
 }
 
 .first-header {
@@ -27,7 +28,8 @@
     gap: 20px;
 }
 
-.contacts a, p{
+.contacts a,
+p {
     color: white;
     text-decoration: none;
 }
@@ -67,11 +69,16 @@
 .header-main-links a {
     color: white;
     text-decoration: none;
+    transition: 0.4s;
+}
+
+.header-main-links a:hover {
+    color: yellow;
 }
 
 .carousel-cotnainer {
     width: 100%;
-    height: 100vh;
+    min-height: 919px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -84,4 +91,154 @@
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.637);
+}
+
+.registerBtn {
+    display: flex;
+    width: 170px;
+    height: fit-content;
+    background-color: #1d2129;
+    border-radius: 40px;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0px 0px 2px white;
+    font-family: var(--main-georgin-font);
+}
+
+.icon-Container {
+    width: 45px;
+    height: 45px;
+    background-color: yellow;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 3px solid #1d2129;
+}
+
+.text {
+    width: calc(170px - 45px);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.1em;
+    letter-spacing: 1.2px;
+}
+
+.icon-Container svg {
+    transition-duration: 1.5s;
+}
+
+.registerBtn:hover .icon-Container svg {
+    transition-duration: 1.5s;
+    animation: arrow 1s linear infinite;
+}
+
+@keyframes arrow {
+    0% {
+        opacity: 0;
+        margin-left: 0px;
+    }
+
+    100% {
+        opacity: 1;
+        margin-left: 10px;
+    }
+}
+
+.carousel-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    font-family: var(--main-georgin-font);
+    text-wrap: wrap;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.carousel-content h1 {
+    line-height: 1.5;
+}
+
+.main-gs {
+    color: yellow;
+}
+
+.arrow-down {
+    width: 70px;
+    height: 70px;
+    border-radius: 100px;
+    background: none;
+    text-decoration: none;
+    color: yellow;
+    border: 1px solid white;
+    font-size: xx-large;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.8s;
+    transform: translateY(120px);
+}
+
+.arrowAnimation {
+    animation: arrowMove 3s infinite;
+}
+
+@keyframes arrowMove {
+    0% {
+        transform: translateY(-6px);
+    }
+
+    50% {
+        transform: translateY(6px);
+    }
+
+    100% {
+        transform: translateY(-6px);
+    }
+}
+
+.arrow-down:hover {
+    text-shadow:
+        0 0 5px #FFFF00,
+        /* Outer glow */
+        0 0 10px #FFFF00,
+        0 0 15px #FFEA00,
+        0 0 20px #FFEA00,
+        0 0 25px #FFEA00,
+        0 0 30px #FFEA00,
+        0 0 35px #FFEA00;
+    border: 1px solid yellow;
+    animation: pulse 1.5s infinite alternate;
+
+}
+
+@keyframes pulse {
+    0% {
+        text-shadow:
+            0 0 5px #FFFF00,
+            0 0 10px #FFFF00,
+            0 0 15px #FFEA00,
+            0 0 20px #FFEA00,
+            0 0 25px #FFEA00,
+            0 0 30px #FFEA00,
+            0 0 35px #FFEA00;
+    }
+
+    100% {
+        text-shadow:
+            0 0 10px #FFFF00,
+            0 0 20px #FFFF00,
+            0 0 30px #FFEA00,
+            0 0 40px #FFEA00,
+            0 0 50px #FFEA00,
+            0 0 60px #FFEA00,
+            0 0 70px #FFEA00;
+    }
 }

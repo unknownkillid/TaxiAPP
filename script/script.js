@@ -15,5 +15,13 @@ function carousel() {
     }
 }
 
-setInterval(carousel, 3000);
+setInterval(carousel, 5000);
 carousel();
+
+const carSound = new Audio('./assets/carSound.mp3');
+
+document.getElementById('arrowBtn').addEventListener('click', () => {
+    carSound.duration = 0;
+    carSound.volume = 0.2
+    carSound.play();
+})
