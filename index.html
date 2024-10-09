@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,32 +8,55 @@
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/root.css">
     <link rel="stylesheet" href="styles/fonts.css">
-</head>
-<body>  
-    
-    <header class="mainHeader">
-       <img src="assets/Danteslogo.png" class="logo" width="180px" alt="">
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
 
-         <div class="header-links">
-            <a href="#">Home</a>
-            <a href="#">Service</a>
-            <a href="#">Register</a>
-            <a href="#">Help</a>
-            <a href="#">Contact</a>
+</head>
+
+<body>
+
+    <header class="mainHeader">
+        <div class="first-header" id="firstHeader">
+            <div class="contacts">
+                <i class="fa-solid fa-phone"></i>
+                    <a href="tel:+995511430528">(+995) 511-430-528</a>
+                    <a href="tel:+995551430528">(+995) 551-430-528</a>
+                
+                <i class="fa-solid fa-envelope"></i>
+                <a href="mailto:Contact@GSTbilisi.com">Contact@GSTbilisi.com</a>
+                <i class="fa-solid fa-clock"></i>
+                <p>ორშ-პარ: 10:00-დან - 18:00-მდე </p>
+            </div>
+
+            <div class="social-media-links">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-square-whatsapp"></i>
+                <i class="fa-brands fa-viber"></i>
+            </div>
         </div>
 
-        <div class="numbers">
-            <a href="tel:+995511439528">(+995) 511-439-528</a>
-            <a href="tel:+995551430528">(+995) 551-430-528</a>
+        <div class="second-header" id="secondHeader">
+            <img src="assets/Danteslogo.png" width="200px" alt="">
+
+            <div class="header-main-links">
+                <a href="#">მთავარი</a>
+                <a href="#">სერვისი</a>
+                <a href="#">დახმარება</a>
+                <a href="#">კონტაქტი</a>
+            </div>
+
+            <button class="registerBtn" id="register">რეგისტრაცია</button>
         </div>
     </header>
 
     <section class="section1">
-        <div class="carIMGContainer">
-            <img src="assets/car.png" class="car" width="900px" alt="">
+        <div class="carousel-cotnainer" id="carouselContainer">
+            <div class="carousel-content">
+                
+            </div>
         </div>
     </section>
 
     <script src="script/script.js"></script>
 </body>
+
 </html>
