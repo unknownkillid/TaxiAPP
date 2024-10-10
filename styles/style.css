@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 .mainHeader {
@@ -9,6 +10,7 @@
     width: 100%;
     z-index: 200;
     font-family: var(--main-georgin-font);
+    transition: 1s;
 }
 
 .first-header {
@@ -58,6 +60,7 @@ p {
     align-items: center;
     justify-content: space-between;
     padding: 0 100px;
+    transition: 0.7s;
 }
 
 .header-main-links {
@@ -82,6 +85,7 @@ p {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    /* background-attachment: fixed; */
     transition: background-image 1s ease-in-out;
     position: relative;
 }
@@ -241,4 +245,23 @@ p {
             0 0 60px #FFEA00,
             0 0 70px #FFEA00;
     }
+}
+
+.section2 {
+    width: 100%;
+    height: 2000px;
+    background-color: black;
+}
+
+.headerHideShow {
+    transform: translateY(-100%);
+    opacity: 0;
+}
+
+.bgColorWhenMove {
+    background-color: rgba(0, 0, 0, 0.616);
+}
+
+.second-header img {
+    cursor: pointer;
 }
