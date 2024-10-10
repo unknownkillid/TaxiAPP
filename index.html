@@ -82,64 +82,134 @@
                         <a href="https://apps.apple.com/sa/app/yandex-pro/id1496904594" target="_blank"> <img
                                 src="assets/GooglePlay.jpg" alt=""></a>
                     </div>
-
                 </div>
-
             </div>
         </section>
 
         <section class="section2" id="section2">
-            <form action="#" class="registerForm">
-                <h1>რეგისტრაცია!</h1>
-                <div class="driver-reg" id="driverReg">
-                    <div class="choose">
-                        <div class="slider" id="slider"></div>
-                        <h3 id="taxiChoose">ტაქსი</h3>
-                        <h3 id="courierChoose">კურიერი</h3>
-                    </div>
-                    <div class="registerFormInputs" id="registerFormInputs">
-                        <label for="nameInput">სახელი და გვარი</label>
-                        <input type="text" class="nameInput" id="nameInput">
-                        <label for="telNumber">ტელ. ნომერი</label>
-                        <input type="tel" class="tel-Number" id="telNumber">
-                        <label for="licNumber">მართვის მოწმობის სერია და ნომერი</label>
-                        <input type="text" class="lic-num" id="licNumber">
-                        <label for="date">გაცემის თარიღი</label>
-                        <input type="date" class="date" id="date">
-                        <label for="valid">მოქმედების ვადა</label>
-                        <input type="date" class="validation" id="valid">
-                        <label for="carModel">ავტომობილის მოდელი</label>
-                        <input type="text" class="model" id="carModel">
-                        <label for="carColorChoose">ავტომობილის ფერი</label>
-                        <select name="carColor" id="carColorChoose">
-                            <option value="#" selected disabled>აირჩიეთ</option>
-                            <option value="#">თეთრი</option>
-                            <option value="#">შავი</option>
-                            <option value="#">ყავისფერი</option>
-                            <option value="#">წითელი</option>
-                            <option value="#">ნარინჯისფერი</option>
-                            <option value="#">ყვითელი</option>
-                            <option value="#">მწვანე</option>
-                            <option value="#">ლურჯი</option>
-                            <option value="#">იისფერი</option>
-                            <option value="#">რუხი</option>
-                            <option value="#">ცისფერი</option>
-                            <option value="#">ვარდისფერი</option>
-                            <option value="#">ბეჟი</option>
-                        </select>
-                        <label for="releaseDate">ავტომობილის გამოშვების წელი</label>
-                        <input type="number" class="release-date" id="releaseDate">
-                        <label for="regionNumber">ავტომობილის სახელმწიფო ნომერი</label>
-                        <input type="number" class="reg-number" id="regionNumber">
-                        <label for="cityChoose">ქალაქი</label>
-                        <select name="city" id="cityChoose">
-                            <option value="#" selected disabled>აირჩიეთ</option>
-                            <option value="#">თბილისი</option>
-                            <option value="#">ბათუმი</option>
-                            <option value="#">ქუთაისი</option>
-                        </select>
-                    </div>
+            <h1>რეგისტრაცია!</h1>
+            <div class="driver-reg" id="driverReg">
+                <div class="choose">
+                    <div class="slider" id="slider"></div>
+                    <h3 id="taxiChoose">ტაქსი</h3>
+                    <h3 id="courierChoose">კურიერი</h3>
                 </div>
+                <form action="#" class="registerForm">
+
+                    <div class="registerFormInputs" id="registerFormInputs">
+                        <div class="input-group">
+                            <label for="nameInput" class="labelAnimation">სახელი და გვარი</label>
+                            <input type="text" class="nameInput" id="nameInput">
+                        </div>
+
+                        <div class="input-group">
+                            <label for="telNumber" class="labelAnimation">ტელ. ნომერი</label>
+
+                            <input type="tel" class="tel-Number" id="telNumber">
+                        </div>
+
+                        <div class="input-group">
+                            <label for="licNumber" class="labelAnimation">მართვის მოწმობის სერია და ნომერი</label>
+
+                            <input type="text" class="lic-num" id="licNumber">
+                        </div>
+
+                        <div class="input-group">
+                            <label for="date" class="labelAnimation">გაცემის თარიღი</label>
+
+                            <input type="date" class="date" id="date">
+                        </div>
+
+                        <div class="input-group">
+                            <label for="valid" class="labelAnimation">მოქმედების ვადა</label>
+
+                            <input type="date" class="validation" id="valid">
+                        </div>
+
+                        <div class="input-group">
+                            <label for="carModel" class="labelAnimation">ავტომობილის მოდელი</label>
+
+                            <input type="text" class="model" id="carModel">
+                        </div>
+
+                        <div class="input-group">
+                            <label for="carColorChoose">ავტომობილის ფერი</label>
+
+                            <select name="carColor" id="carColorChoose">
+                                <option value="#" selected disabled>აირჩიეთ</option>
+                                <option value="#">თეთრი</option>
+                                <option value="#">შავი</option>
+                                <option value="#">ყავისფერი</option>
+                                <option value="#">წითელი</option>
+                                <option value="#">ნარინჯისფერი</option>
+                                <option value="#">ყვითელი</option>
+                                <option value="#">მწვანე</option>
+                                <option value="#">ლურჯი</option>
+                                <option value="#">იისფერი</option>
+                                <option value="#">რუხი</option>
+                                <option value="#">ცისფერი</option>
+                                <option value="#">ვარდისფერი</option>
+                                <option value="#">ბეჟი</option>
+                            </select>
+                        </div>
+
+                        <div class="input-group">
+                            <label for="releaseDate" class="labelAnimation">ავტომობილის გამოშვების წელი</label>
+
+                            <input type="number" class="release-date" id="releaseDate">
+                        </div>
+
+                        <div class="input-group">
+                            <label for="regionNumber" class="labelAnimation">ავტომობილის სახელმწიფო ნომერი</label>
+
+                            <input type="number" class="reg-number" id="regionNumber">
+                        </div>
+
+                        <div class="input-group">
+                            <label for="cityChoose">ქალაქი</label>
+
+                            <select name="city" id="cityChoose">
+                                <option value="#" selected disabled>აირჩიეთ</option>
+                                <option value="#">თბილისი</option>
+                                <option value="#">ბათუმი</option>
+                                <option value="#">ქუთაისი</option>
+                            </select>
+                        </div>
+                    </div>
+
+            </div>
+            </form>
+
+            <form action="#" class="courierForm">
+                <div class="input-group">
+                    <label for="nameInput" class="labelAnimation">სახელი და გვარი</label>
+                    <input type="text" class="nameInput" id="nameInput">
+                </div>
+
+                <div class="input-group">
+                    <label for="telNumber" class="labelAnimation">ტელ. ნომერი</label>
+
+                    <input type="tel" class="tel-Number" id="telNumber">
+                </div>
+
+                <div class="input-group">
+                    <label for="regionNumber" class="labelAnimation">ავტომობილის სახელმწიფო ნომერი</label>
+
+                    <input type="number" class="reg-number" id="regionNumber">
+                </div>
+
+                <div class="input-group">
+                    <label for="cityChoose">ქალაქი</label>
+
+                    <select name="city" id="cityChoose">
+                        <option value="#" selected disabled>აირჩიეთ</option>
+                        <option value="#">თბილისი</option>
+                        <option value="#">ბათუმი</option>
+                        <option value="#">ქუთაისი</option>
+                    </select>
+                </div>
+            </div>
+
             </form>
         </section>
 
