@@ -1,5 +1,7 @@
 :root {
-    --main-black: #0000;
+    --main-black: #161616;
     --main-georgin-font: 'georgian-main-font', sans-serif;
-
+    --main-yellow: #FFEE00;
+    --whiteColorHex: #ffff;
+    --blackColorHex: #000000;
 }

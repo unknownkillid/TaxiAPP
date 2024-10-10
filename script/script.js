@@ -18,13 +18,6 @@ function carousel() {
 setInterval(carousel, 5000);
 carousel();
 
-const carSound = new Audio('./assets/carSound.mp3');
-
-document.getElementById('arrowBtn').addEventListener('click', () => {
-    carSound.duration = 0;
-    carSound.volume = 0.2;
-    carSound.play();
-})
 
 let lastScrollTop = 0;
 const header = document.getElementById("mainHeader");
@@ -46,3 +39,34 @@ window.addEventListener("scroll", function () {
   
   lastScrollTop = scrollTop;
 });
+
+//Slider Move Function
+
+function sliderMove() {
+  const slider = document.getElementById('slider');
+  const taxi = document.getElementById('taxiChoose');
+  const courier = document.getElementById('courierChoose');
+  let slideBool = false;
+  taxi.classList.add('colorChangeOnChoose')
+
+  courier.addEventListener('click', () => {
+    if (!slideBool) {
+      slider.classList.add('sliderRight');
+      taxi.classList.remove('colorChangeOnChoose')
+      courier.classList.add('colorChangeOnChoose')
+      slideBool = true;
+    }
+  });
+
+  taxi.addEventListener('click', () => {
+    if (slideBool) {
+      slider.classList.remove('sliderRight');
+      courier.classList.remove('colorChangeOnChoose')
+      taxi.classList.add('colorChangeOnChoose')
+      slideBool = false;
+    }
+  });
+}
+
+sliderMove();
+

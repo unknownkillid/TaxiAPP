@@ -5,10 +5,14 @@
     scroll-behavior: smooth;
 }
 
+#body {
+    height: 100px !important;
+}
+
 .mainHeader {
-    position: fixed;
+    position: fixed !important;
     width: 100%;
-    z-index: 200;
+    z-index: 1000 !important;
     font-family: var(--main-georgin-font);
     transition: 1s;
 }
@@ -21,7 +25,7 @@
     padding: 0 100px;
     width: 100%;
     height: 40px;
-    background-color: black;
+    background-color: var(--main-black);
 }
 
 .contacts {
@@ -32,7 +36,7 @@
 
 .contacts a,
 p {
-    color: white;
+    color: var(--whiteColorHex);
     text-decoration: none;
 }
 
@@ -48,7 +52,7 @@ p {
 }
 
 .social-media-links i {
-    color: white;
+    color: var(--whiteColorHex);
 }
 
 .second-header {
@@ -70,13 +74,13 @@ p {
 }
 
 .header-main-links a {
-    color: white;
+    color: var(--whiteColorHex);
     text-decoration: none;
     transition: 0.4s;
 }
 
 .header-main-links a:hover {
-    color: yellow;
+    color: var(--main-yellow);
 }
 
 .carousel-cotnainer {
@@ -107,14 +111,14 @@ p {
     align-items: center;
     border: none;
     cursor: pointer;
-    box-shadow: 0px 0px 2px white;
+    box-shadow: 0px 0px 2px var(--whiteColorHex);
     font-family: var(--main-georgin-font);
 }
 
 .icon-Container {
     width: 45px;
     height: 45px;
-    background-color: yellow;
+    background-color: var(--main-yellow);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -128,7 +132,7 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: var(--whiteColorHex);
     font-size: 1.1em;
     letter-spacing: 1.2px;
 }
@@ -158,7 +162,7 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: var(--whiteColorHex);
     text-align: center;
     font-family: var(--main-georgin-font);
     text-wrap: wrap;
@@ -171,86 +175,22 @@ p {
 }
 
 .main-gs {
-    color: yellow;
+    color: var(--main-yellow);
 }
 
-.arrow-down {
-    width: 70px;
-    height: 70px;
-    border-radius: 100px;
-    background: none;
-    text-decoration: none;
-    color: yellow;
-    border: 1px solid white;
-    font-size: xx-large;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: 0.8s;
-    transform: translateY(120px);
-}
-
-.arrowAnimation {
-    animation: arrowMove 3s infinite;
-}
-
-@keyframes arrowMove {
-    0% {
-        transform: translateY(-6px);
-    }
-
-    50% {
-        transform: translateY(6px);
-    }
-
-    100% {
-        transform: translateY(-6px);
-    }
-}
-
-.arrow-down:hover {
-    text-shadow:
-        0 0 5px #FFFF00,
-        /* Outer glow */
-        0 0 10px #FFFF00,
-        0 0 15px #FFEA00,
-        0 0 20px #FFEA00,
-        0 0 25px #FFEA00,
-        0 0 30px #FFEA00,
-        0 0 35px #FFEA00;
-    border: 1px solid yellow;
-    animation: pulse 1.5s infinite alternate;
-
-}
-
-@keyframes pulse {
-    0% {
-        text-shadow:
-            0 0 5px #FFFF00,
-            0 0 10px #FFFF00,
-            0 0 15px #FFEA00,
-            0 0 20px #FFEA00,
-            0 0 25px #FFEA00,
-            0 0 30px #FFEA00,
-            0 0 35px #FFEA00;
-    }
-
-    100% {
-        text-shadow:
-            0 0 10px #FFFF00,
-            0 0 20px #FFFF00,
-            0 0 30px #FFEA00,
-            0 0 40px #FFEA00,
-            0 0 50px #FFEA00,
-            0 0 60px #FFEA00,
-            0 0 70px #FFEA00;
-    }
+.registerForm h1 {
+    color: var(--main-yellow);
 }
 
 .section2 {
     width: 100%;
-    height: 2000px;
-    background-color: black;
+    height: auto;
+    background-color: var(--main-black);
+    color: var(--whiteColorHex);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 90px 0;
 }
 
 .headerHideShow {
@@ -264,4 +204,77 @@ p {
 
 .second-header img {
     cursor: pointer;
+}
+
+.registerForm {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.driver-reg {
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.registerFormInputs {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.choose {
+    width: 300px;
+    background-color: var(--main-yellow);
+    color: var(--blackColorHex);
+    height: 60px;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    position: relative;
+    padding: 0 25px;
+}
+
+.choose h3 {
+    color: var(--main-black);
+    cursor: pointer;
+    z-index: 2;
+    transition: 1s;
+}
+
+.slider {
+    width: 150px;
+    height: 50px;
+    border-radius: 40px;
+    background-color: var(--blackColorHex);
+    position: absolute;
+    left: 4px;
+    z-index: 1;
+    transition: 0.7s;
+}
+
+.registerFormInputs input, .registerFormInputs select{
+    width: 400px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    padding: 10px;
+    color: var(--main-black);
+}
+
+.sliderRight {
+    left: 146px;
+}
+
+.colorChangeOnChoose {
+    color: var(--whiteColorHex) !important;
 }
