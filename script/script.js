@@ -42,6 +42,9 @@ window.addEventListener("scroll", function () {
 
 //Slider Move Function
 
+const registerForm = document.getElementById('registerFormID')
+const courierForm = document.getElementById('courierFormID')
+
 function sliderMove() {
   const slider = document.getElementById('slider');
   const taxi = document.getElementById('taxiChoose');
@@ -54,6 +57,8 @@ function sliderMove() {
       slider.classList.add('sliderRight');
       taxi.classList.remove('colorChangeOnChoose')
       courier.classList.add('colorChangeOnChoose')
+      courierForm.classList.add('courierFormShow')
+      registerForm.classList.add('registerFormNone')
       slideBool = true;
     }
   });
@@ -63,6 +68,9 @@ function sliderMove() {
       slider.classList.remove('sliderRight');
       courier.classList.remove('colorChangeOnChoose')
       taxi.classList.add('colorChangeOnChoose')
+      courierForm.classList.remove('courierFormShow')
+      registerForm.classList.remove('registerFormNone')
+
       slideBool = false;
     }
   });

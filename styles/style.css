@@ -218,6 +218,18 @@ p {
     gap: 20px;
 }
 
+.courierForm {
+    display: none;
+}
+
+.registerFormNone {
+    display: none;
+}
+
+.courierFormShow {
+    display: flex;
+}
+
 .driver-reg {
     display: flex;
     gap: 30px;
