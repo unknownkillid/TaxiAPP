@@ -304,3 +304,21 @@ p {
 .colorChangeOnChoose {
     color: var(--whiteColorHex) !important;
 }
+
+.regButton  {
+    width: 150px;
+    height: 40px;
+    background: none;
+    color: var(--whiteColorHex);
+    border-radius: 40px;
+    border: 1px solid var(--main-yellow);
+    cursor: pointer;
+    outline: none;
+    font-family: var(--main-georgin-font);
+    transition: 0.4s;
+}
+
+.regButton:hover {
+    box-shadow: inset 150px 0px 0px var(--main-yellow);
+    color: var(--blackColorHex);
+}
