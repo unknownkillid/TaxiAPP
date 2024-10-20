@@ -13,201 +13,339 @@
 
 </head>
 
-<body>
-        <header class="mainHeader" id="mainHeader">
-            <div class="first-header" id="firstHeader">
-                <div class="contacts">
-                    <i class="fa-solid fa-phone"></i>
-                    <a href="tel:+995511430528">(+995) 511-430-528</a>
-                    <a href="tel:+995551430528">(+995) 551-430-528</a>
+<body class="body">
+    <header class="mainHeader" id="mainHeader">
+        <div class="first-header" id="firstHeader">
+            <div class="contacts">
+                <i class="fa-solid fa-phone"></i>
+                <a href="tel:+995511430528">(+995) 511-430-528</a>
+                <a href="tel:+995551430528">(+995) 551-430-528</a>
 
-                    <i class="fa-solid fa-envelope"></i>
-                    <a href="mailto:Contact@GSTbilisi.com">Contact@GSTbilisi.com</a>
-                    <i class="fa-solid fa-clock"></i>
-                    <p>ორშ-პარ: 10:00-დან - 18:00-მდე </p>
-                </div>
-
-                <div class="social-media-links">
-                    <select name="language-selection" id="language">
-                        <option value="GE">GE</option>
-                        <option value="EN">EN</option>
-                        <option value="RU">RU</option>
-                    </select>
-                    <i class="fa-brands fa-facebook"></i>
-                    <i class="fa-brands fa-square-whatsapp"></i>
-                    <i class="fa-brands fa-viber"></i>
-                </div>
+                <i class="fa-solid fa-envelope"></i>
+                <a href="mailto:Contact@GSTbilisi.com">Contact@GSTbilisi.com</a>
+                <i class="fa-solid fa-clock"></i>
+                <p>ორშ-პარ: 10:00-დან - 18:00-მდე </p>
             </div>
 
-            <div class="second-header" id="secondHeader">
-                <img src="assets/Danteslogo.png" width="200px" alt="">
-
-                <div class="header-main-links">
-                    <a href="#">მთავარი</a>
-                    <a href="#">სერვისი</a>
-                    <a href="#">დახმარება</a>
-                    <a href="#">კონტაქტი</a>
-                </div>
-
-                <button class="registerBtn" id="register">
-                    <span class="text">რეგისტრაცია</span>
-                    <span class="icon-Container">
-                        <svg width="16" height="19" viewBox="0 0 16 19" fill="nones" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="1.61321" cy="1.61321" r="1.5" fill="black"></circle>
-                            <circle cx="5.73583" cy="1.61321" r="1.5" fill="black"></circle>
-                            <circle cx="5.73583" cy="5.5566" r="1.5" fill="black"></circle>
-                            <circle cx="9.85851" cy="5.5566" r="1.5" fill="black"></circle>
-                            <circle cx="9.85851" cy="9.5" r="1.5" fill="black"></circle>
-                            <circle cx="13.9811" cy="9.5" r="1.5" fill="black"></circle>
-                            <circle cx="5.73583" cy="13.4434" r="1.5" fill="black"></circle>
-                            <circle cx="9.85851" cy="13.4434" r="1.5" fill="black"></circle>
-                            <circle cx="1.61321" cy="17.3868" r="1.5" fill="black"></circle>
-                            <circle cx="5.73583" cy="17.3868" r="1.5" fill="black"></circle>
-                        </svg>
-                    </span>
-                </button>
+            <div class="social-media-links">
+                <select name="language-selection" id="language">
+                    <option value="GE">GE</option>
+                    <option value="EN">EN</option>
+                    <option value="RU">RU</option>
+                </select>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-square-whatsapp"></i>
+                <i class="fa-brands fa-viber"></i>
             </div>
-        </header>
+        </div>
 
-        <section class="section1">
-            <div class="carousel-cotnainer" id="carouselContainer">
-                <div class="carousel-content">
-                    <h1><span class="main-gs">GS Tbilisi</span> <br> იანდექს ტაქსის ოფიციალური <br> პარტნიორი
-                        საქართველოში
-                    </h1>
-                    <div class="downloadApps-container">
-                        <a href="https://play.google.com/store/apps/details?id=ru.yandex.taximeter&hl=en&pli=1"
-                            target="_blank"><img src="assets/AppleStore.jpg" alt=""></a>
-                        <a href="https://apps.apple.com/sa/app/yandex-pro/id1496904594" target="_blank"> <img
-                                src="assets/GooglePlay.jpg" alt=""></a>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <div class="second-header" id="secondHeader">
+            <img src="assets/Danteslogo.png" width="200px" alt="">
 
-        <section class="section2" id="section2">
-            <h1>რეგისტრაცია!</h1>
-            <div class="driver-reg" id="driverReg">
-                <div class="choose">
-                    <div class="slider" id="slider"></div>
-                    <h3 id="taxiChoose">ტაქსი</h3>
-                    <h3 id="courierChoose">კურიერი</h3>
-                </div>
-                <form action="#" class="registerForm" id="registerFormID">
-                    <div class="registerFormInputs" id="registerFormInputs">
-                        <div class="input-group">
-                            <label for="nameInput" class="labelAnimation">სახელი და გვარი</label>
-                            <input type="text" class="nameInput" id="nameInput" required>
-                        </div>
-
-                        <div class="input-group">
-                            <label for="telNumber" class="labelAnimation">ტელ. ნომერი</label>
-                            <input type="tel" class="tel-Number" id="telNumber" required>
-                        </div>
-
-                        <div class="input-group">
-                            <label for="licNumber" class="labelAnimation">მართვის მოწმობის სერია და ნომერი</label>
-                            <input type="text" class="lic-num" id="licNumber" required>
-                        </div>
-
-                        <div class="input-group">
-                            <label for="date" class="labelAnimation">გაცემის თარიღი</label>
-                            <input type="date" class="date" id="date" required>
-                        </div>
-
-                        <div class="input-group">
-                            <label for="valid" class="labelAnimation">მოქმედების ვადა</label>
-                            <input type="date" class="validation" id="valid" required>
-                        </div>
-
-                        <div class="input-group">
-                            <label for="carModel" class="labelAnimation">ავტომობილის მოდელი</label>
-                            <input type="text" class="model" id="carModel" required>
-                        </div>
-
-                        <div class="input-group">
-                            <label for="carColorChoose">ავტომობილის ფერი</label>
-                            <select name="carColor" id="carColorChoose" required>
-                                <option value="#" selected disabled>აირჩიეთ</option>
-                                <option value="#">თეთრი</option>
-                                <option value="#">შავი</option>
-                                <option value="#">ყავისფერი</option>
-                                <option value="#">წითელი</option>
-                                <option value="#">ნარინჯისფერი</option>
-                                <option value="#">ყვითელი</option>
-                                <option value="#">მწვანე</option>
-                                <option value="#">ლურჯი</option>
-                                <option value="#">იისფერი</option>
-                                <option value="#">რუხი</option>
-                                <option value="#">ცისფერი</option>
-                                <option value="#">ვარდისფერი</option>
-                                <option value="#">ბეჟი</option>
-                            </select>
-                        </div>
-
-                        <div class="input-group" >
-                            <label for="releaseDate" class="labelAnimation">ავტომობილის გამოშვების წელი</label>
-                            <input type="number" class="release-date" id="releaseDate" required>
-                        </div>
-
-                        <div class="input-group">
-                            <label for="regionNumber" class="labelAnimation">ავტომობილის სახელმწიფო ნომერი</label>
-                            <input type="text" class="reg-number" id="regionNumber" required>
-                        </div>
-
-                        <div class="input-group">
-                            <label for="cityChoose">ქალაქი</label>
-
-                            <select name="city" id="cityChoose" required>
-                                <option value="#" selected disabled>აირჩიეთ</option>
-                                <option value="#">თბილისი</option>
-                                <option value="#">ბათუმი</option>
-                                <option value="#">ქუთაისი</option>
-                            </select>
-                        </div>
-                    </div>
-                    <button class="regButton" id="taxiRegisterButton">რეგისტრაცია</button>
-
+            <div class="header-main-links">
+                <a href="#">მთავარი</a>
+                <a href="#">სერვისი</a>
+                <a href="#">დახმარება</a>
+                <a href="#">კონტაქტი</a>
             </div>
 
-            </form>
+            <button class="registerBtn" id="register">
+                <span class="text">რეგისტრაცია</span>
+                <span class="icon-Container">
+                    <svg width="16" height="19" viewBox="0 0 16 19" fill="nones" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="1.61321" cy="1.61321" r="1.5" fill="black"></circle>
+                        <circle cx="5.73583" cy="1.61321" r="1.5" fill="black"></circle>
+                        <circle cx="5.73583" cy="5.5566" r="1.5" fill="black"></circle>
+                        <circle cx="9.85851" cy="5.5566" r="1.5" fill="black"></circle>
+                        <circle cx="9.85851" cy="9.5" r="1.5" fill="black"></circle>
+                        <circle cx="13.9811" cy="9.5" r="1.5" fill="black"></circle>
+                        <circle cx="5.73583" cy="13.4434" r="1.5" fill="black"></circle>
+                        <circle cx="9.85851" cy="13.4434" r="1.5" fill="black"></circle>
+                        <circle cx="1.61321" cy="17.3868" r="1.5" fill="black"></circle>
+                        <circle cx="5.73583" cy="17.3868" r="1.5" fill="black"></circle>
+                    </svg>
+                </span>
+            </button>
+        </div>
+    </header>
 
-            <form action="#" class="courierForm" id="courierFormID">
-                <div class="input-group">
-                    <label for="nameInput" class="labelAnimation">სახელი და გვარი</label>
-                    <input type="text" class="nameInput" id="nameInput" required>
+    <section class="section1">
+        <div class="carousel-cotnainer" id="carouselContainer">
+            <div class="carousel-content">
+                <h1 class="gsTbilisiMainContnet"><span class="main-gs">GS Tbilisi</span> <br> იანდექს ტაქსის ოფიციალური
+                    <br> პარტნიორი
+                    საქართველოში
+                </h1>
+                <div class="downloadApps-container">
+                    <a href="https://play.google.com/store/apps/details?id=ru.yandex.taximeter&hl=en&pli=1"
+                        target="_blank"><img src="assets/AppleStore.jpg" alt=""></a>
+                    <a href="https://apps.apple.com/sa/app/yandex-pro/id1496904594" target="_blank"> <img
+                            src="assets/GooglePlay.jpg" alt=""></a>
                 </div>
-
-                <div class="input-group">
-                    <label for="telNumber" class="labelAnimation">ტელ. ნომერი</label>
-                    <input type="tel" class="tel-Number" id="telNumber" required>
-                </div>
-
-                <div class="input-group">
-                    <label for="regionNumber" class="labelAnimation">ავტომობილის სახელმწიფო ნომერი</label>
-                    <input type="text" class="reg-number" id="regionNumber" required>
-                </div>
-
-                <div class="input-group">
-                    <label for="cityChoose">ქალაქი</label>
-
-                    <select name="city" id="cityChoose" required>
-                        <option value="#" selected disabled>აირჩიეთ</option>
-                        <option value="#">თბილისი</option>
-                        <option value="#">ბათუმი</option>
-                        <option value="#">ქუთაისი</option>
-                    </select>
-                </div>
-                <button class="regButton" id="courierRegisterButton">რეგისტრაცია</button>
-
-    </form>
-
-    
+            </div>
+        </div>
     </section>
+
+    <section class="section2" id="section2">
+        <img src="assets/yellowDot.png" class="yellowDecor decNum1" width="500px" alt="">
+        <img src="assets/yellowDot.png" class="yellowDecor decNum2" width="500px" alt="">
+        <h1>რეგისტრაცია!</h1>
+        <div class="driver-reg" id="driverReg">
+            <div class="choose">
+                <div class="slider" id="slider"></div>
+                <h3 id="taxiChoose">ტაქსი</h3>
+                <h3 id="courierChoose">კურიერი</h3>
+            </div>
+            <form action="#" class="registerForm" id="registerFormID">
+                <div class="registerFormInputs" id="registerFormInputs">
+                    <div class="input-group">
+                        <label for="nameInput" class="labelAnimation">სახელი და გვარი</label>
+                        <input type="text" class="nameInput" id="nameInput" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="telNumber" class="labelAnimation">ტელ. ნომერი</label>
+                        <input type="tel" class="tel-Number" id="telNumber" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="licNumber" class="labelAnimation">მართვის მოწმობის სერია და ნომერი</label>
+                        <input type="text" class="lic-num" id="licNumber" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="date" class="labelAnimation">გაცემის თარიღი</label>
+                        <input type="date" class="date" id="date" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="valid" class="labelAnimation">მოქმედების ვადა</label>
+                        <input type="date" class="validation" id="valid" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="carModel" class="labelAnimation">ავტომობილის მოდელი</label>
+                        <input type="text" class="model" id="carModel" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="carColorChoose">ავტომობილის ფერი</label>
+                        <select name="carColor" id="carColorChoose" required>
+                            <option value="#" selected disabled>აირჩიეთ</option>
+                            <option value="#">თეთრი</option>
+                            <option value="#">შავი</option>
+                            <option value="#">ყავისფერი</option>
+                            <option value="#">წითელი</option>
+                            <option value="#">ნარინჯისფერი</option>
+                            <option value="#">ყვითელი</option>
+                            <option value="#">მწვანე</option>
+                            <option value="#">ლურჯი</option>
+                            <option value="#">იისფერი</option>
+                            <option value="#">რუხი</option>
+                            <option value="#">ცისფერი</option>
+                            <option value="#">ვარდისფერი</option>
+                            <option value="#">ბეჟი</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="releaseDate" class="labelAnimation">ავტომობილის გამოშვების წელი</label>
+                        <input type="number" class="release-date" id="releaseDate" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="regionNumber" class="labelAnimation">ავტომობილის სახელმწიფო ნომერი</label>
+                        <input type="text" class="reg-number" id="regionNumber" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="cityChoose">ქალაქი</label>
+
+                        <select name="city" id="cityChoose" required>
+                            <option value="#" selected disabled>აირჩიეთ</option>
+                            <option value="#">თბილისი</option>
+                            <option value="#">ბათუმი</option>
+                            <option value="#">ქუთაისი</option>
+                        </select>
+                    </div>
+                </div>
+                <button class="regButton" id="taxiRegisterButton">რეგისტრაცია</button>
+
+        </div>
+
+        </form>
+
+        <form action="#" class="courierForm" id="courierFormID">
+            <div class="input-group">
+                <label for="nameInput" class="labelAnimation">სახელი და გვარი</label>
+                <input type="text" class="nameInput" id="nameInput" required>
+            </div>
+
+            <div class="input-group">
+                <label for="telNumber" class="labelAnimation">ტელ. ნომერი</label>
+                <input type="tel" class="tel-Number" id="telNumber" required>
+            </div>
+
+            <div class="input-group">
+                <label for="regionNumber" class="labelAnimation">ავტომობილის სახელმწიფო ნომერი</label>
+                <input type="text" class="reg-number" id="regionNumber" required>
+            </div>
+
+            <div class="input-group">
+                <label for="cityChoose">ქალაქი</label>
+
+                <select name="city" id="cityChoose" required>
+                    <option value="#" selected disabled>აირჩიეთ</option>
+                    <option value="#">თბილისი</option>
+                    <option value="#">ბათუმი</option>
+                    <option value="#">ქუთაისი</option>
+                </select>
+            </div>
+            <button class="regButton" id="courierRegisterButton">რეგისტრაცია</button>
+
+        </form>
+
+
+    </section>
+
+    <section class="section3" id="section3">
+        <div class="reason-container">
+            <h1>რატომ უნდა დასაქმდეთ ჩვენს კომპანიაში?</h1>
+            <p>რას ვთავაზობთ ჩვენს მომხმარებლებს?</p>
+        </div>
+
+        <div class="reasons-main-container">
+            <div class="reasons-container">
+                <div class="reason" data-tilt>
+                    <p>რეგისტრაცია სულ რაღაც 🖐 წუთში</p>
+                </div>
+                <div class="reason" data-tilt>
+                    <p>დაგეხმარებით A და B კატეგორიის ლიცენზიის მიღებაში</p>
+                </div>
+                <div class="reason" data-tilt>
+                    <p>თანხის ჩარიცხვა 24/7 ზე </p>
+                </div>
+            </div>
+            <div class="reason-img-container">
+                <img src="assets/driver.png" width="600px" alt="">
+            </div>
+            <div class="reasons-container">
+                <div class="reason" data-tilt>
+                    <p>პროგრამული მხარდაჭერა 24/7 ზე</p>
+                </div>
+                <div class="reason" data-tilt>
+                    <p>ფასდაკლება ზეთებზე</p>
+                </div>
+                <div class="reason" data-tilt>
+                    <p>Toyota Prius ის ყოლის შემთხვევაში,კატალიზატორი ტექ.დათვალიერების გატარება</p>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+    <section class="section4" id="section4">
+        <div class="news-header">
+            <h1>ბოლო სიახლეები</h1>
+        </div>
+
+        <div class="news-container">
+            <div class="news-card">
+                <div class="news-img"></div>
+                <div class="news-info">
+                    <h3>enjoy best travel experience</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae mollitia voluptate ducimus magni.
+                        Maiores vel distinctio, id numquam iure molestiae sed eius dolore et asperiores dignissimos
+                        sequi at itaque animi?</p>
+                </div>
+            </div>
+            <div class="news-card">
+                <div class="news-img"></div>
+                <div class="news-info">
+                    <h3>enjoy best travel experience</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae mollitia voluptate ducimus magni.
+                        Maiores vel distinctio, id numquam iure molestiae sed eius dolore et asperiores dignissimos
+                        sequi at itaque animi?</p>
+                </div>
+            </div>
+            <div class="news-card">
+                <div class="news-img"></div>
+                <div class="news-info">
+                    <h3>enjoy best travel experience</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae mollitia voluptate ducimus magni.
+                        Maiores vel distinctio, id numquam iure molestiae sed eius dolore et asperiores dignissimos
+                        sequi at itaque animi?</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section5" id="section5">
+        <h1> ხშირად დასმული კითხვები </h1>
+
+        <div class="main-quiestions-container">
+            <div class="questions-container">
+                <div class="collapsible-section">
+                    <div class="collapsible-header">ბანკში დავალიანება მაქვს და ხომ არ ჩამომეჭრება თანხა?
+                    </div>
+                    <div class="collapsible-content">
+                        <p>👉ვერცერთი ბანკი ვერ ჩამოგაჭრით თანხას ჩვენი ბარათიდან.</p>
+                    </div>
+                </div>
+                <div class="collapsible-section">
+                    <div class="collapsible-header">ბანკში ყადაღა მადევს და შევძლებ ბარათის გამოყენებას?</div>
+                    <div class="collapsible-content">
+                        <p>✅თუ გაქვთ ბანკთან დაკავშირებული პრობლემა, ყადაღა, დავალიანება, ან რაიმე მსგავსი შეფერხება,
+                            ნებისმიერ შემთხვევაში შეძლებთ არსებული ბარათის გამოყენებას.</p>
+                    </div>
+                </div>
+                <div class="collapsible-section">
+                    <div class="collapsible-header">როგორ შევძლებ თანხის გამოტანას?</div>
+                    <div class="collapsible-content">
+                        <p>💸არსებული ბარათის საშუალებით შეძლებთ თანხის გამოტანას ნებისმიერ დროს, ნებისმიერი ადგილიდან.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="questions-container">
+                <div class="collapsible-section">
+                    <div class="collapsible-header">როგორ შევძლებ თანხის მიღებას?</div>
+                    <div class="collapsible-content">
+                        <p>💰აღარ იქნება საჭირო ოფისში დარეკვა თანხის ჩარიცხვაზე, თქვენს ფინანსებს თავად განკარგავთ
+                            თქვენ.</p>
+                    </div>
+                </div>
+                <div class="collapsible-section">
+                    <div class="collapsible-header">ვის შეუძლია ბარათის გამოყენება?</div>
+                    <div class="collapsible-content">
+                        <p>🫂ბარათის გამოყენებას შეძლებენ Yandex Comfort-ში რეგისტრირებული მძღოლები</p>
+                    </div>
+                </div>
+                <div class="collapsible-section">
+                    <div class="collapsible-header">რა არის ბარათის საფასური?</div>
+                    <div class="collapsible-content">
+                        <p>🙌ბარათი გადმოგეცემათ სრულიად უფასოდ.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <button class="regButton">ვრცლად</button>
+
+    </section>
+
+
+    <footer class="footer">
+
+    </footer>
 
     </div>
 
     <script src="script/script.js"></script>
+    <script type="module" src="node_modules/vanilla-tilt/src/vanilla-tilt.js"></script>
 
 
 

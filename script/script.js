@@ -70,10 +70,33 @@ function sliderMove() {
       taxi.classList.add('colorChangeOnChoose')
       courierForm.classList.remove('courierFormShow')
       registerForm.classList.remove('registerFormNone')
-
       slideBool = false;
     }
   });
 }
 
 sliderMove();
+
+document.addEventListener("DOMContentLoaded", function() {
+  const headers = document.querySelectorAll(".collapsible-header");
+  const contents = document.querySelectorAll(".collapsible-content");
+
+  headers.forEach((header, index) => {
+      header.addEventListener("click", () => {
+          contents.forEach((content, contentIndex) => {
+              if (contentIndex !== index) {
+                  content.style.maxHeight = null;
+                  content.classList.remove("active");
+              }
+          });
+
+          const content = contents[index];
+          if (content.classList.contains("active")) {
+              content.style.maxHeight = null;
+          } else {
+              content.style.maxHeight = content.scrollHeight + "px";
+          }
+          content.classList.toggle("active");
+      });
+  });
+});
