@@ -500,6 +500,7 @@ form {
     color: var(--whiteColorHex);
     border-top-left-radius: 20px;
     transition: 0.4s;
+    line-height: 1rem;
 }
 
 .collapsible-header:hover {
@@ -522,6 +523,11 @@ form {
     max-width: 500px;
 }
 
+.collapsible-content p {
+    line-height: 1rem;
+}
+
+
 .app-download-info {
     display: flex;
     flex-direction: column;
@@ -536,8 +542,13 @@ form {
 
 .collapsible-content.active {
     padding: 40px 10px;
-    height: 400px;
+    height: auto;
 }
+
+.problemContainer.active {
+    height: 5500px !important;
+}
+
 
 .questions-container {
     display: flex;
@@ -824,5 +835,11 @@ form {
 
     .reason {
         width: 100%;
+    }
+}
+
+@media screen and (max-width: 407px) {
+    .section1 {
+        height: 700px;
     }
 }

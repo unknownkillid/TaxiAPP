@@ -80,6 +80,7 @@ sliderMove();
 document.addEventListener("DOMContentLoaded", function() {
   const headers = document.querySelectorAll(".collapsible-header");
   const contents = document.querySelectorAll(".collapsible-content");
+  const problemContainer = document.querySelectorAll(".problemContainer");
 
   headers.forEach((header, index) => {
       header.addEventListener("click", () => {
