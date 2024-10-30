@@ -739,3 +739,90 @@ form {
         zoom: 80%;
     }
 }
+
+@media screen and (max-width: 531px) {
+    .cardImg {
+        display: none;
+    }
+
+    .section5 {
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width: 483px) {
+    .mersedesImg {
+        zoom: 50%;
+    }
+}
+
+
+@media screen and (max-width: 573px) {
+   
+
+    .second-header {
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 469px) {
+    .app-download-info h2 {
+        font-size: medium;
+    }
+}
+
+@media screen and (max-width: 403px) {
+    .registerBtn {
+        zoom: 80%;
+    }
+
+    .logoMain {
+        zoom: 70%;
+    }
+
+    .footerMap {
+        zoom: 80%;
+    }
+}
+
+@media screen and (max-width: 377px){ 
+    .gsTbilisiMainContnet {
+        zoom: 80%;
+    }
+}
+@media screen and (max-width: 421px){ 
+    .driver-reg {
+        zoom: 80%;
+    }
+}
+@media screen and (max-width: 475px){ 
+    .section3 h1 {
+        font-size: medium;
+    }
+}
+
+@media screen and (max-width: 349px){ 
+    .section3 h1 {
+        font-size: small;
+    }
+}
+
+@media screen and (max-width: 449px){ 
+    .section3 {
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 447px){ 
+    .section3 {
+        padding: 10px;
+    }
+
+    .reasons-container {
+        width: 100%;
+    }
+
+    .reason {
+        width: 100%;
+    }
+}
