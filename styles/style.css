@@ -5,6 +5,16 @@
     scroll-behavior: smooth;
 }
 
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: var(--main-black);
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    background-color: var(--main-yellow);
+}
+
 .mainHeader {
     position: fixed !important;
     width: 100%;
@@ -565,7 +575,7 @@ form {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 0 50px;
+    padding: 0 300px;
     font-family: var(--main-georgin-font);
 }
 
@@ -745,11 +755,6 @@ form {
     }
 }
 
-@media screen and (max-width: 533px) {
-    .section5 h1 {
-        zoom: 80%;
-    }
-}
 
 @media screen and (max-width: 531px) {
     .cardImg {
@@ -808,6 +813,10 @@ form {
 }
 @media screen and (max-width: 475px){ 
     .section3 h1 {
+        font-size: medium;
+    }
+
+    .section5 h1 {
         font-size: medium;
     }
 }

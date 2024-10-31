@@ -101,3 +101,18 @@ document.addEventListener("DOMContentLoaded", function() {
       });
   });
 });
+
+
+    function changeLanguage() {
+        const language = document.getElementById("language").value;
+        
+        const urls = {
+            "GE": "index.html",
+            "EN": "index-EN.html",
+            "RU": "index-RU.html"
+        };
+        
+        if (urls[language]) {
+            window.location.href = urls[language];
+        }
+    }

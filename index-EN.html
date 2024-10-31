@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GS Tbilisi - მთავარი გვერდი</title>
+    <title>GS Tbilisi - Home</title>
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/root.css">
     <link rel="stylesheet" href="styles/fonts.css">
@@ -14,6 +14,12 @@
     <link rel="icon" href="assets/taxi_log_o2.png">
 
 </head>
+
+<style>
+    * {
+        font-family: 'Courier New', Courier, monospace;
+    }
+</style>
 
 <body class="body">
     <header class="mainHeader" id="mainHeader">
@@ -26,13 +32,13 @@
                 <i class="fa-solid fa-envelope"></i>
                 <a href="mailto:Contact@GSTbilisi.com">Contact@GSTbilisi.com</a>
                 <i class="fa-solid fa-clock clockLogo"></i>
-                <p class="times">ორშ-პარ: 10:00-დან - 18:00-მდე </p>
+                <p class="times">Mo-Fr: 10:00 - 18:00 </p>
             </div>
 
             <div class="social-media-links">
                 <select name="language-selection" id="language" onchange="changeLanguage()">
-                    <option value="GE" selected>GE</option>
-                    <option value="EN">EN</option>
+                    <option value="GE">GE</option>
+                    <option value="EN" selected>EN</option>
                     <option value="RU">RU</option>
                 </select>
                 <i class="fa-brands fa-facebook"></i>
@@ -45,14 +51,14 @@
             <img src="assets/Danteslogo.png" class="logoMain" width="200px" alt="">
 
             <div class="header-main-links">
-                <a href="#">მთავარი</a>
-                <a href="#">სერვისი</a>
-                <a href="#">დახმარება</a>
-                <a href="#">კონტაქტი</a>
+                <a href="#">Home</a>
+                <a href="#">Service</a>
+                <a href="#">Help</a>
+                <a href="#">Contact</a>
             </div>
 
             <button class="registerBtn" id="register">
-                <span class="text">რეგისტრაცია</span>
+                <span class="text">Register</span>
                 <span class="icon-Container">
                     <svg width="16" height="19" viewBox="0 0 16 19" fill="nones" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="1.61321" cy="1.61321" r="1.5" fill="black"></circle>
@@ -74,12 +80,12 @@
     <section class="section1">
         <div class="carousel-cotnainer" id="carouselContainer">
             <div class="carousel-content">
-                <h1 class="gsTbilisiMainContnet"><span class="main-gs">GS Tbilisi</span> <br> იანდექს ტაქსის ოფიციალური
-                    <br> პარტნიორი
-                    საქართველოში
+                <h1 class="gsTbilisiMainContnet"><span class="main-gs">GS Tbilisi</span> <br> Yandex Taxi official
+                    <br> partner in Georgia
+
                 </h1>
                 <div class="app-download-info">
-                    <h2>Yandex Pro-ს გადმოსაწერად აირჩიეთ</h2>
+                    <h2>Download Yandex Pro APP</h2>
                     <img src="assets/PRO.jpg" class="appDownloadLogo" width="70px" alt="">
 
                 </div>
@@ -94,87 +100,87 @@
     </section>
 
     <section class="section2" id="section2">
-        <h1>რეგისტრაცია!</h1>
+        <h1>Register Now</h1>
         <div class="driver-reg" id="driverReg">
             <div class="choose">
                 <div class="slider" id="slider"></div>
-                <h3 id="taxiChoose">ტაქსი</h3>
-                <h3 id="courierChoose">კურიერი</h3>
+                <h3 id="taxiChoose">Taxi</h3>
+                <h3 id="courierChoose">Courier</h3>
             </div>
             <form action="#" class="registerForm" id="registerFormID">
                 <div class="registerFormInputs" id="registerFormInputs">
                     <div class="input-group">
-                        <label for="nameInput" class="labelAnimation">სახელი და გვარი</label>
+                        <label for="nameInput" class="labelAnimation">Full Name</label>
                         <input type="text" class="nameInput" id="nameInput" required>
                     </div>
 
                     <div class="input-group">
-                        <label for="telNumber" class="labelAnimation">ტელ. ნომერი</label>
+                        <label for="telNumber" class="labelAnimation">Mobile Number</label>
                         <input type="tel" class="tel-Number" id="telNumber" required>
                     </div>
 
                     <div class="input-group">
-                        <label for="licNumber" class="labelAnimation">მართვის მოწმობის სერია და ნომერი</label>
+                        <label for="licNumber" class="labelAnimation">Driver's license series and number</label>
                         <input type="text" class="lic-num" id="licNumber" required>
                     </div>
 
                     <div class="input-group">
-                        <label for="date" class="labelAnimation">გაცემის თარიღი</label>
+                        <label for="date" class="labelAnimation">Issue date</label>
                         <input type="date" class="date" id="date" required>
                     </div>
 
                     <div class="input-group">
-                        <label for="valid" class="labelAnimation">მოქმედების ვადა</label>
+                        <label for="valid" class="labelAnimation">Validity period</label>
                         <input type="date" class="validation" id="valid" required>
                     </div>
 
                     <div class="input-group">
-                        <label for="carModel" class="labelAnimation">ავტომობილის მოდელი</label>
+                        <label for="carModel" class="labelAnimation">Car model</label>
                         <input type="text" class="model" id="carModel" required>
                     </div>
 
                     <div class="input-group">
-                        <label for="carColorChoose">ავტომობილის ფერი</label>
+                        <label for="carColorChoose">Car Color</label>
                         <select name="carColor" id="carColorChoose" required>
-                            <option value="#" selected disabled>აირჩიეთ</option>
-                            <option value="#">თეთრი</option>
-                            <option value="#">შავი</option>
-                            <option value="#">ყავისფერი</option>
-                            <option value="#">წითელი</option>
-                            <option value="#">ნარინჯისფერი</option>
-                            <option value="#">ყვითელი</option>
-                            <option value="#">მწვანე</option>
-                            <option value="#">ლურჯი</option>
-                            <option value="#">იისფერი</option>
-                            <option value="#">რუხი</option>
-                            <option value="#">ცისფერი</option>
-                            <option value="#">ვარდისფერი</option>
-                            <option value="#">ბეჟი</option>
+                            <option value="#" selected disabled>Choose</option>
+                            <option value="#">White</option>
+                            <option value="#">black</option>
+                            <option value="#">Brown</option>
+                            <option value="#">Red</option>
+                            <option value="#">Orange</option>
+                            <option value="#">Yellow</option>
+                            <option value="#">Green</option>
+                            <option value="#">Blue</option>
+                            <option value="#">Purple</option>
+                            <option value="#">Gray</option>
+                            <option value="#">Light Blue</option>
+                            <option value="#">Pink</option>
+                            <option value="#">Crimson</option>
                         </select>
                     </div>
 
                     <div class="input-group">
-                        <label for="releaseDate" class="labelAnimation">ავტომობილის გამოშვების წელი</label>
+                        <label for="releaseDate" class="labelAnimation">Year of release of the vehicle</label>
                         <input type="number" class="release-date" id="releaseDate" required>
                     </div>
 
                     <div class="input-group">
-                        <label for="regionNumber" class="labelAnimation">ავტომობილის სახელმწიფო ნომერი</label>
+                        <label for="regionNumber" class="labelAnimation">Vehicle state number</label>
                         <input type="text" class="reg-number" id="regionNumber" required>
                     </div>
 
                     <div class="input-group">
-                        <label for="cityChoose">ქალაქი</label>
+                        <label for="cityChoose">City</label>
 
                         <select name="city" id="cityChoose" required>
-                            <option value="#" selected disabled>აირჩიეთ</option>
-                            <option value="#">თბილისი</option>
-                            <option value="#">ბათუმი</option>
-                            <option value="#">ქუთაისი</option>
+                            <option value="#" selected disabled>Choose</option>
+                            <option value="#">Tbilisi</option>
+                            <option value="#">Batumi</option>
+                            <option value="#">Kutaisi</option>
                         </select>
                     </div>
                 </div>
-                <button class="regButton" id="taxiRegisterButton">რეგისტრაცია</button>
+                <button class="regButton" id="taxiRegisterButton">Register</button>
 
         </div>
 
@@ -182,31 +188,31 @@
 
         <form action="#" class="courierForm" id="courierFormID">
             <div class="input-group">
-                <label for="nameInput" class="labelAnimation">სახელი და გვარი</label>
+                <label for="nameInput" class="labelAnimation">Full Name</label>
                 <input type="text" class="nameInput" id="nameInput" required>
             </div>
 
             <div class="input-group">
-                <label for="telNumber" class="labelAnimation">ტელ. ნომერი</label>
+                <label for="telNumber" class="labelAnimation">Mobile Number</label>
                 <input type="tel" class="tel-Number" id="telNumber" required>
             </div>
 
             <div class="input-group">
-                <label for="regionNumber" class="labelAnimation">ავტომობილის სახელმწიფო ნომერი</label>
+                <label for="regionNumber" class="labelAnimation">Vehicle state number</label>
                 <input type="text" class="reg-number" id="regionNumber" required>
             </div>
 
             <div class="input-group">
-                <label for="cityChoose">ქალაქი</label>
+                <label for="cityChoose">City</label>
 
                 <select name="city" id="cityChoose" required>
-                    <option value="#" selected disabled>აირჩიეთ</option>
-                    <option value="#">თბილისი</option>
-                    <option value="#">ბათუმი</option>
-                    <option value="#">ქუთაისი</option>
+                    <option value="#" selected disabled>Choose</option>
+                    <option value="#">Tbilisi</option>
+                    <option value="#">Batumi</option>
+                    <option value="#">Kutaisi</option>
                 </select>
             </div>
-            <button class="regButton" id="courierRegisterButton">რეგისტრაცია</button>
+            <button class="regButton" id="courierRegisterButton">Register</button>
 
         </form>
 
@@ -215,20 +221,20 @@
 
     <section class="section3" id="section3">
         <div class="reason-container">
-            <h1>რატომ უნდა დასაქმდეთ ჩვენს კომპანიაში?</h1>
-            <p>რას ვთავაზობთ ჩვენს მომხმარებლებს?</p>
+            <h1>Why should you work in our company??</h1>
+            <p>What we offer our customers?</p>
         </div>
 
         <div class="reasons-main-container">
             <div class="reasons-container">
                 <div class="reason" data-tilt>
-                    <p>რეგისტრაცია სულ რაღაც 🖐 წუთში</p>
+                    <p>Registration in just 🖐 minutes</p>
                 </div>
                 <div class="reason" data-tilt>
-                    <p>დაგეხმარებით A და B კატეგორიის ლიცენზიის მიღებაში</p>
+                    <p>We will help you to get category A and B license</p>
                 </div>
                 <div class="reason" data-tilt>
-                    <p>თანხის ჩარიცხვა 24/7 ზე </p>
+                    <p>Deposit money 24/7</p>
                 </div>
             </div>
             <div class="reason-img-container">
@@ -236,13 +242,13 @@
             </div>
             <div class="reasons-container">
                 <div class="reason" data-tilt>
-                    <p>პროგრამული მხარდაჭერა 24/7 ზე</p>
+                    <p>24/7 software support</p>
                 </div>
                 <div class="reason" data-tilt>
-                    <p>ფასდაკლება ზეთებზე</p>
+                    <p>Discount on oils</p>
                 </div>
                 <div class="reason" data-tilt>
-                    <p>Toyota Prius ის ყოლის შემთხვევაში,კატალიზატორი ტექ.დათვალიერების გატარება</p>
+                    <p>If you have a Toyota Prius, the catalyst is to carry out a technical inspection</p>
                 </div>
             </div>
         </div>
@@ -251,28 +257,29 @@
     </section>
 
     <section class="section5" id="section5">
-        <h1> ხშირად დასმული კითხვები </h1>
+        <h1> Frequently Asked Questions </h1>
 
         <div class="main-quiestions-container">
             <div class="questions-container">
                 <div class="collapsible-section">
-                    <div class="collapsible-header">ბანკში დავალიანება მაქვს და ხომ არ ჩამომეჭრება თანხა?
+                    <div class="collapsible-header">I have a debt in the bank and will the amount be deducted??
                     </div>
                     <div class="collapsible-content">
-                        <p>👉ვერცერთი ბანკი ვერ ჩამოგაჭრით თანხას ჩვენი ბარათიდან.</p>
+                        <p>👉 No bank can deduct the amount from our card.</p>
                     </div>
                 </div>
                 <div class="collapsible-section">
-                    <div class="collapsible-header">ბანკში ყადაღა მადევს და შევძლებ ბარათის გამოყენებას?</div>
+                    <div class="collapsible-header">There is a seizure in the bank and I will be able to use the card?
+                    </div>
                     <div class="collapsible-content problemContainer">
-                        <p>✅თუ გაქვთ ბანკთან დაკავშირებული პრობლემა, ან შეფერხება,
-                            ნებისმიერ შემთხვევაში შეძლებთ ბარათის გამოყენებას.</p>
+                        <p>✅ If you have a problem with the bank or a delay,
+                            In any case, you will be able to use the card.</p>
                     </div>
                 </div>
                 <div class="collapsible-section">
-                    <div class="collapsible-header">როგორ შევძლებ თანხის გამოტანას?</div>
+                    <div class="collapsible-header">How can I withdraw money??</div>
                     <div class="collapsible-content">
-                        <p>💸არსებული ბარათის საშუალებით შეძლებთ თანხის გამოტანას ნებისმიერ დროს, ნებისმიერი ადგილიდან.
+                        <p>💸 With the existing card, you will be able to withdraw money at any time, from any place.
                         </p>
                     </div>
                 </div>
@@ -284,38 +291,39 @@
 
             <div class="questions-container">
                 <div class="collapsible-section">
-                    <div class="collapsible-header">როგორ შევძლებ თანხის მიღებას?</div>
+                    <div class="collapsible-header">How can I get the money?</div>
                     <div class="collapsible-content">
-                        <p>💰აღარ იქნება საჭირო ოფისში დარეკვა თანხის ჩარიცხვაზე, თქვენს ფინანსებს თავად განკარგავთ
-                            თქვენ.</p>
+                        <p>💰 It will no longer be necessary to call the office to deposit money, you will manage your
+                            finances yourself
+                            you.</p>
                     </div>
                 </div>
                 <div class="collapsible-section">
-                    <div class="collapsible-header">ვის შეუძლია ბარათის გამოყენება?</div>
+                    <div class="collapsible-header">Who can use the card??</div>
                     <div class="collapsible-content">
-                        <p>🫂ბარათის გამოყენებას შეძლებენ Yandex Comfort-ში რეგისტრირებული მძღოლები</p>
+                        <p>Drivers registered in Yandex Comfort will be able to use the card</p>
                     </div>
                 </div>
                 <div class="collapsible-section">
-                    <div class="collapsible-header">რა არის ბარათის საფასური?</div>
+                    <div class="collapsible-header">What are the card fees??</div>
                     <div class="collapsible-content">
-                        <p>🙌ბარათი გადმოგეცემათ სრულიად უფასოდ.</p>
+                        <p>🙌The card will be delivered to you completely free of charge.</p>
                     </div>
                 </div>
 
             </div>
         </div>
 
-        <button class="regButton">ვრცლად</button>
+        <button class="regButton">Read More</button>
     </section>
 
 
     <footer class="footer">
         <div class="main-links-footer">
-            <a href="#">მთავარი</a>
-            <a href="#">სერვისი</a>
-            <a href="#">დახმარება</a>
-            <a href="#">კონტაქტი</a>
+            <a href="#">Home</a>
+            <a href="#">Service</a>
+            <a href="#">Help</a>
+            <a href="#">Contact</a>
         </div>
         <div class="footerContactContainer">
             <a href="tel:+995511430528">(+995) 511-430-528</a>
@@ -339,4 +347,5 @@
 
 
 </body>
+
 </html>
