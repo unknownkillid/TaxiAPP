@@ -484,7 +484,7 @@ form {
 .main-quiestions-container {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     width: 100%;
     padding: 20px;
@@ -850,5 +850,11 @@ form {
 @media screen and (max-width: 407px) {
     .section1 {
         height: 700px;
+
+    }
+
+    .carousel-content {
+        height: 700px;
+
     }
 }
