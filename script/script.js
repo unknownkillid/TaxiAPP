@@ -118,6 +118,7 @@ function changeLanguage() {
 }
 
 
+
 const burgerMenuContainer = document.getElementById('burgerMenuContainer');
 const burgerMenuButton = document.getElementById('burgerBtn');
 const burgerXmark = document.getElementById('xmark');
@@ -146,3 +147,17 @@ document.querySelectorAll('.clicable-linkBurger').forEach(clickable => {
     secondHeader.classList.add('bgColorWhenMove')
   })
 })
+
+function changeLanguageBurger() {
+  const language = document.getElementById("languageBurger").value;
+
+  const urls = {
+    "GE": "index.html",
+    "EN": "index-EN.html",
+    "RU": "index-RU.html"
+  };
+
+  if (urls[language]) {
+    window.location.href = urls[language];
+  }
+}
