@@ -15,6 +15,12 @@
 
 </head>
 
+<style>
+    * {
+        
+    }
+</style>
+
 <body class="body">
     <header class="mainHeader" id="mainHeader">
         <div class="first-header" id="firstHeader">
@@ -45,16 +51,56 @@
             <img src="assets/Danteslogo.png" class="logoMain" width="200px" alt="">
 
             <div class="header-main-links">
-                <a href="#">მთავარი</a>
-                <a href="#">სერვისი</a>
-                <a href="#">დახმარება</a>
-                <a href="#">კონტაქტი</a>
+                <a href="#section1">მთავარი</a>
+                <a href="#section3">სერვისი</a>
+                <a href="#section5">დახმარება</a>
+                <a href="#footer">კონტაქტი</a>
             </div>
 
-            <button class="registerBtn" id="register">
+            <div class="headerButtonsContainer">
+                <div class="burger-menu" id="burgerBtn">
+                    <i class="fa-solid fa-bars" ></i>
+                </div>
+
+                <a href="#section2">
+                    <button class="registerBtn" id="register">
+                        <span class="text">რეგისტრაცია</span>
+                        <span class="icon-Container">
+                            <svg width="16" height="19" viewBox="0 0 16 19" fill="nones"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="1.61321" cy="1.61321" r="1.5" fill="black"></circle>
+                                <circle cx="5.73583" cy="1.61321" r="1.5" fill="black"></circle>
+                                <circle cx="5.73583" cy="5.5566" r="1.5" fill="black"></circle>
+                                <circle cx="9.85851" cy="5.5566" r="1.5" fill="black"></circle>
+                                <circle cx="9.85851" cy="9.5" r="1.5" fill="black"></circle>
+                                <circle cx="13.9811" cy="9.5" r="1.5" fill="black"></circle>
+                                <circle cx="5.73583" cy="13.4434" r="1.5" fill="black"></circle>
+                                <circle cx="9.85851" cy="13.4434" r="1.5" fill="black"></circle>
+                                <circle cx="1.61321" cy="17.3868" r="1.5" fill="black"></circle>
+                                <circle cx="5.73583" cy="17.3868" r="1.5" fill="black"></circle>
+                            </svg>
+                        </span>
+                    </button>
+                </a>
+            </div>
+
+
+        </div>
+    </header>
+
+    <div class="burger-menu-container-main" id="burgerMenuContainer">
+
+        <header class="burger-menu-header" id="burgerMenuHeader">
+            <i class="fa-solid fa-circle-xmark" id="xmark"></i>
+        </header>
+
+        <div class="burger-menucontent-secondary">
+           <a href="#section2">
+            <button class="registerBtn" id="registerBurger">
                 <span class="text">რეგისტრაცია</span>
                 <span class="icon-Container">
-                    <svg width="16" height="19" viewBox="0 0 16 19" fill="nones" xmlns="http://www.w3.org/2000/svg">
+                    <svg width="16" height="19" viewBox="0 0 16 19" fill="nones"
+                        xmlns="http://www.w3.org/2000/svg">
                         <circle cx="1.61321" cy="1.61321" r="1.5" fill="black"></circle>
                         <circle cx="5.73583" cy="1.61321" r="1.5" fill="black"></circle>
                         <circle cx="5.73583" cy="5.5566" r="1.5" fill="black"></circle>
@@ -68,10 +114,35 @@
                     </svg>
                 </span>
             </button>
-        </div>
-    </header>
+           </a>
+            <div class="burger-info">
+                <a href="tel:+995511430528">(+995) 511-430-528</a>
+                <a href="tel:+995551430528">(+995) 551-430-528</a>
+                <a href="mailto:Contact@GSTbilisi.com">Contact@GSTbilisi.com</a>
+                <p class="times">ორშ-პარ: 10:00-დან - 18:00-მდე </p>
+            </div>
+            <div class="burgerMenuLinks">
+                <a href="#section1" class="clicable-linkBurger">მთავარი</a>
+                <a href="#section3" class="clicable-linkBurger">სერვისი</a>
+                <a href="#section5" class="clicable-linkBurger">დახმარება</a>
+                <a href="#footer" class="clicable-linkBurger">კონტაქტი</a>
+            </div>
 
-    <section class="section1">
+            <select name="language-selection" id="language" onchange="changeLanguage()">
+                <option value="GE" selected>GE</option>
+                <option value="EN">EN</option>
+                <option value="RU">RU</option>
+            </select>
+
+            <div class="brands">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-square-whatsapp"></i>
+                <i class="fa-brands fa-viber"></i>
+            </div>
+        </div>
+    </div>
+
+    <section class="section1" id="section1">
         <div class="carousel-cotnainer" id="carouselContainer">
             <div class="carousel-content">
                 <h1 class="gsTbilisiMainContnet"><span class="main-gs">GS Tbilisi</span> <br> იანდექს ტაქსის ოფიციალური
@@ -307,7 +378,7 @@
     </section>
 
 
-    <footer class="footer">
+    <footer class="footer" id="footer">
         <div class="main-links-footer">
             <a href="#">მთავარი</a>
             <a href="#">სერვისი</a>
@@ -336,4 +407,5 @@
 
 
 </body>
+
 </html>

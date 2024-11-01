@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    text-decoration-line: none;
 }
 
 ::-webkit-scrollbar {
@@ -22,6 +23,10 @@
     font-family: var(--main-georgin-font);
     transition: 1s;
     -moz-transition: 1s;
+}
+
+body {
+    position: relative;
 }
 
 .first-header {
@@ -294,11 +299,100 @@ form {
     justify-content: center;
 }
 
+.headerButtonsContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: white;
+    font-size: x-large;
+}
+
+.burger-menu {
+    color: white;
+    font-size: xx-large;
+    transition: 0.4s;
+}
+
+.burger-menu:hover {
+    color: var(--main-yellow);
+}
+
+.burger-menu-header {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.burger-menu-container-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+    text-decoration: none;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    background-color: var(--main-black);
+    color: white;
+    padding: 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    font-size: xx-large;
+    transform: translate(100%);
+    transition: 0.8s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+.brands {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.burger-menucontent-secondary {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+.burgerMenuLinks {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.burger-menu-container-main a {
+    color: white;
+}
+
+.burger-menuIn {
+    transform: translate(0%);
+}
+
 .registerFormInputs {
     display: flex;
     justify-content: center;
     flex-direction: column;
     gap: 10px;
+}
+
+.fa-facebook {
+    color: rgb(65, 65, 252);
+}
+.fa-square-whatsapp {
+    color: rgb(40, 153, 40);
+}
+
+.fa-viber {
+    color: rgb(175, 56, 175);
 }
 
 .input-group {
@@ -807,7 +901,8 @@ form {
     }
 }
 @media screen and (max-width: 421px){ 
-    .driver-reg {
+    .driver-reg,
+    .courierForm {
         zoom: 80%;
     }
 }

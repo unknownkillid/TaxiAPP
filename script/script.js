@@ -77,42 +77,72 @@ function sliderMove() {
 
 sliderMove();
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   const headers = document.querySelectorAll(".collapsible-header");
   const contents = document.querySelectorAll(".collapsible-content");
   const problemContainer = document.querySelectorAll(".problemContainer");
 
   headers.forEach((header, index) => {
-      header.addEventListener("click", () => {
-          contents.forEach((content, contentIndex) => {
-              if (contentIndex !== index) {
-                  content.style.maxHeight = null;
-                  content.classList.remove("active");
-              }
-          });
-
-          const content = contents[index];
-          if (content.classList.contains("active")) {
-              content.style.maxHeight = null;
-          } else {
-              content.style.maxHeight = content.scrollHeight + "px";
-          }
-          content.classList.toggle("active");
+    header.addEventListener("click", () => {
+      contents.forEach((content, contentIndex) => {
+        if (contentIndex !== index) {
+          content.style.maxHeight = null;
+          content.classList.remove("active");
+        }
       });
+
+      const content = contents[index];
+      if (content.classList.contains("active")) {
+        content.style.maxHeight = null;
+      } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+      }
+      content.classList.toggle("active");
+    });
   });
 });
 
 
-    function changeLanguage() {
-        const language = document.getElementById("language").value;
-        
-        const urls = {
-            "GE": "index.html",
-            "EN": "index-EN.html",
-            "RU": "index-RU.html"
-        };
-        
-        if (urls[language]) {
-            window.location.href = urls[language];
-        }
-    }
+function changeLanguage() {
+  const language = document.getElementById("language").value;
+
+  const urls = {
+    "GE": "index.html",
+    "EN": "index-EN.html",
+    "RU": "index-RU.html"
+  };
+
+  if (urls[language]) {
+    window.location.href = urls[language];
+  }
+}
+
+
+const burgerMenuContainer = document.getElementById('burgerMenuContainer');
+const burgerMenuButton = document.getElementById('burgerBtn');
+const burgerXmark = document.getElementById('xmark');
+const registerBurger = document.getElementById('registerBurger')
+
+burgerMenuButton.addEventListener('click', () => {
+  burgerMenuContainer.classList.add('burger-menuIn');
+  header.classList.add("headerHideShow");
+  document.body.style.overflow = 'hidden';
+})
+
+burgerXmark.addEventListener('click', () => {
+  burgerMenuContainer.classList.remove('burger-menuIn');
+  document.body.style.overflow = 'scroll';
+})
+
+registerBurger.addEventListener('click', () => {
+  burgerMenuContainer.classList.remove('burger-menuIn');
+  document.body.style.overflow = 'scroll';
+})
+
+document.querySelectorAll('.clicable-linkBurger').forEach(clickable => {
+  clickable.addEventListener('click', () => {
+    burgerMenuContainer.classList.remove('burger-menuIn');
+    document.body.style.overflow = 'scroll';
+    secondHeader.classList.add('bgColorWhenMove')
+  })
+})
