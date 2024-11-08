@@ -133,6 +133,8 @@ burgerMenuButton.addEventListener('click', () => {
 burgerXmark.addEventListener('click', () => {
   burgerMenuContainer.classList.remove('burger-menuIn');
   document.body.style.overflow = 'scroll';
+  header.classList.remove("headerHideShow");
+
 })
 
 registerBurger.addEventListener('click', () => {
@@ -149,7 +151,7 @@ document.querySelectorAll('.clicable-linkBurger').forEach(clickable => {
 })
 
 function changeLanguageBurger() {
-  const language = document.getElementById("languageBurger").value;
+  const language = document.querySelectorAll(".language-selection").value;
 
   const urls = {
     "GE": "index.html",

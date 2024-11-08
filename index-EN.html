@@ -15,12 +15,6 @@
 
 </head>
 
-<style>
-    * {
-        font-family: 'Courier New', Courier, monospace;
-    }
-</style>
-
 <body class="body">
     <header class="mainHeader" id="mainHeader">
         <div class="first-header" id="firstHeader">
@@ -32,18 +26,18 @@
                 <i class="fa-solid fa-envelope"></i>
                 <a href="mailto:Contact@GSTbilisi.com">Contact@GSTbilisi.com</a>
                 <i class="fa-solid fa-clock clockLogo"></i>
-                <p class="times">Mo-Fr: 10:00 - 18:00 </p>
+                <p class="times">Mo-Fr: 10:00AM - 06:00PM </p>
             </div>
 
             <div class="social-media-links">
-                <select name="language-selection" id="language" onchange="changeLanguage()">
+                <select name="language-selection" id="languageBurger" onchange="changeLanguageBurger()">
                     <option value="GE">GE</option>
                     <option value="EN" selected>EN</option>
                     <option value="RU">RU</option>
                 </select>
-                <i class="fa-brands fa-facebook"></i>
-                <i class="fa-brands fa-square-whatsapp"></i>
-                <i class="fa-brands fa-viber"></i>
+                <i class="fa-brands fa-facebook facebook"></i>
+                <i class="fa-brands fa-square-whatsapp whatsapp"></i>
+                <i class="fa-brands fa-viber viber"></i>
             </div>
         </div>
 
@@ -51,41 +45,106 @@
             <img src="assets/Danteslogo.png" class="logoMain" width="200px" alt="">
 
             <div class="header-main-links">
-                <a href="#">Home</a>
-                <a href="#">Service</a>
-                <a href="#">Help</a>
-                <a href="#">Contact</a>
+                <a href="#section1">Home</a>
+                <a href="#section3">Service</a>
+                <a href="#section5">Help</a>
+                <a href="#footer">Contact</a>
             </div>
 
-            <button class="registerBtn" id="register">
-                <span class="text">Register</span>
-                <span class="icon-Container">
-                    <svg width="16" height="19" viewBox="0 0 16 19" fill="nones" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="1.61321" cy="1.61321" r="1.5" fill="black"></circle>
-                        <circle cx="5.73583" cy="1.61321" r="1.5" fill="black"></circle>
-                        <circle cx="5.73583" cy="5.5566" r="1.5" fill="black"></circle>
-                        <circle cx="9.85851" cy="5.5566" r="1.5" fill="black"></circle>
-                        <circle cx="9.85851" cy="9.5" r="1.5" fill="black"></circle>
-                        <circle cx="13.9811" cy="9.5" r="1.5" fill="black"></circle>
-                        <circle cx="5.73583" cy="13.4434" r="1.5" fill="black"></circle>
-                        <circle cx="9.85851" cy="13.4434" r="1.5" fill="black"></circle>
-                        <circle cx="1.61321" cy="17.3868" r="1.5" fill="black"></circle>
-                        <circle cx="5.73583" cy="17.3868" r="1.5" fill="black"></circle>
-                    </svg>
-                </span>
-            </button>
+            <div class="headerButtonsContainer">
+                <div class="burger-menu" id="burgerBtn">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+
+                <a href="#section2">
+                    <button class="registerBtn" id="register">
+                        <span class="text">Register</span>
+                        <span class="icon-Container">
+                            <svg width="16" height="19" viewBox="0 0 16 19" fill="nones"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="1.61321" cy="1.61321" r="1.5" fill="black"></circle>
+                                <circle cx="5.73583" cy="1.61321" r="1.5" fill="black"></circle>
+                                <circle cx="5.73583" cy="5.5566" r="1.5" fill="black"></circle>
+                                <circle cx="9.85851" cy="5.5566" r="1.5" fill="black"></circle>
+                                <circle cx="9.85851" cy="9.5" r="1.5" fill="black"></circle>
+                                <circle cx="13.9811" cy="9.5" r="1.5" fill="black"></circle>
+                                <circle cx="5.73583" cy="13.4434" r="1.5" fill="black"></circle>
+                                <circle cx="9.85851" cy="13.4434" r="1.5" fill="black"></circle>
+                                <circle cx="1.61321" cy="17.3868" r="1.5" fill="black"></circle>
+                                <circle cx="5.73583" cy="17.3868" r="1.5" fill="black"></circle>
+                            </svg>
+                        </span>
+                    </button>
+                </a>
+            </div>
+
+
         </div>
     </header>
 
-    <section class="section1">
+    <div class="burger-menu-container-main" id="burgerMenuContainer">
+
+        <header class="burger-menu-header" id="burgerMenuHeader">
+            <i class="fa-solid fa-circle-xmark" id="xmark"></i>
+        </header>
+
+        <div class="burger-menucontent-secondary">
+            <a href="#section2">
+                <button class="registerBtn" id="registerBurger">
+                    <span class="text">Register</span>
+                    <span class="icon-Container">
+                        <svg width="16" height="19" viewBox="0 0 16 19" fill="nones" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="1.61321" cy="1.61321" r="1.5" fill="black"></circle>
+                            <circle cx="5.73583" cy="1.61321" r="1.5" fill="black"></circle>
+                            <circle cx="5.73583" cy="5.5566" r="1.5" fill="black"></circle>
+                            <circle cx="9.85851" cy="5.5566" r="1.5" fill="black"></circle>
+                            <circle cx="9.85851" cy="9.5" r="1.5" fill="black"></circle>
+                            <circle cx="13.9811" cy="9.5" r="1.5" fill="black"></circle>
+                            <circle cx="5.73583" cy="13.4434" r="1.5" fill="black"></circle>
+                            <circle cx="9.85851" cy="13.4434" r="1.5" fill="black"></circle>
+                            <circle cx="1.61321" cy="17.3868" r="1.5" fill="black"></circle>
+                            <circle cx="5.73583" cy="17.3868" r="1.5" fill="black"></circle>
+                        </svg>
+                    </span>
+                </button>
+            </a>
+            <div class="burger-info">
+                <a href="tel:+995511430528">(+995) 511-430-528</a>
+                <a href="tel:+995551430528">(+995) 551-430-528</a>
+                <a href="mailto:Contact@GSTbilisi.com">Contact@GSTbilisi.com</a>
+                <p class="times">Mo-Fr: 10:00AM - 06:00PM </p>
+            </div>
+            <div class="burgerMenuLinks">
+                <a href="#section1" class="clicable-linkBurger">Home</a>
+                <a href="#section3" class="clicable-linkBurger">Service</a>
+                <a href="#section5" class="clicable-linkBurger">Help</a>
+                <a href="#footer" class="clicable-linkBurger">Contact</a>
+            </div>
+
+
+
+            <div class="brands">
+                <select name="language-selection" id="language" class="burger-language" onchange="changeLanguage()">
+                    <option value="GE">GE</option>
+                    <option value="EN" selected>EN</option>
+                    <option value="RU">RU</option>
+                </select>
+                <i class="fa-brands fa-facebook facebook"></i>
+                <i class="fa-brands fa-square-whatsapp whatsapp"></i>
+                <i class="fa-brands fa-viber viber"></i>
+            </div>
+        </div>
+    </div>
+
+    <section class="section1" id="section1">
         <div class="carousel-cotnainer" id="carouselContainer">
             <div class="carousel-content">
-                <h1 class="gsTbilisiMainContnet"><span class="main-gs">GS Tbilisi</span> <br> Yandex Taxi official
-                    <br> partner in Georgia
-
+                <h1 class="gsTbilisiMainContnet"><span class="main-gs">GS Tbilisi</span> <br> Yandex taxi official
+                    partner
+                    in Georgia
                 </h1>
                 <div class="app-download-info">
-                    <h2>Download Yandex Pro APP</h2>
+                    <h2>To download Yandex Pro, select</h2>
                     <img src="assets/PRO.jpg" class="appDownloadLogo" width="70px" alt="">
 
                 </div>
@@ -100,7 +159,7 @@
     </section>
 
     <section class="section2" id="section2">
-        <h1>Register Now</h1>
+        <h1>Register!</h1>
         <div class="driver-reg" id="driverReg">
             <div class="choose">
                 <div class="slider" id="slider"></div>
@@ -140,22 +199,22 @@
                     </div>
 
                     <div class="input-group">
-                        <label for="carColorChoose">Car Color</label>
+                        <label for="carColorChoose">Car color</label>
                         <select name="carColor" id="carColorChoose" required>
-                            <option value="#" selected disabled>Choose</option>
+                            <option value="#" selected disabled>Select</option>
                             <option value="#">White</option>
-                            <option value="#">black</option>
+                            <option value="#">Black</option>
                             <option value="#">Brown</option>
                             <option value="#">Red</option>
-                            <option value="#">Orange</option>
+                            <option value="#">Purple</option>
                             <option value="#">Yellow</option>
                             <option value="#">Green</option>
                             <option value="#">Blue</option>
-                            <option value="#">Purple</option>
+                            <option value="#">Violet</option>
                             <option value="#">Gray</option>
                             <option value="#">Light Blue</option>
                             <option value="#">Pink</option>
-                            <option value="#">Crimson</option>
+                            <option value="#">Beige</option>
                         </select>
                     </div>
 
@@ -173,7 +232,7 @@
                         <label for="cityChoose">City</label>
 
                         <select name="city" id="cityChoose" required>
-                            <option value="#" selected disabled>Choose</option>
+                            <option value="#" selected disabled>Select</option>
                             <option value="#">Tbilisi</option>
                             <option value="#">Batumi</option>
                             <option value="#">Kutaisi</option>
@@ -206,7 +265,7 @@
                 <label for="cityChoose">City</label>
 
                 <select name="city" id="cityChoose" required>
-                    <option value="#" selected disabled>Choose</option>
+                    <option value="#" selected disabled>Select</option>
                     <option value="#">Tbilisi</option>
                     <option value="#">Batumi</option>
                     <option value="#">Kutaisi</option>
@@ -221,7 +280,7 @@
 
     <section class="section3" id="section3">
         <div class="reason-container">
-            <h1>Why should you work in our company??</h1>
+            <h1>Why should you work in our company?</h1>
             <p>What we offer our customers?</p>
         </div>
 
@@ -234,7 +293,7 @@
                     <p>We will help you to get category A and B license</p>
                 </div>
                 <div class="reason" data-tilt>
-                    <p>Deposit money 24/7</p>
+                    <p>Deposit money 24/7 </p>
                 </div>
             </div>
             <div class="reason-img-container">
@@ -248,7 +307,7 @@
                     <p>Discount on oils</p>
                 </div>
                 <div class="reason" data-tilt>
-                    <p>If you have a Toyota Prius, the catalyst is to carry out a technical inspection</p>
+                    <p>If you have a Toyota Prius, the catalyst should be inspected</p>
                 </div>
             </div>
         </div>
@@ -260,16 +319,20 @@
         <h1> Frequently Asked Questions </h1>
 
         <div class="main-quiestions-container">
+
+            <img src="assets/cards.png" class="cardImg" width="400px" alt="">
+
+
             <div class="questions-container">
                 <div class="collapsible-section">
-                    <div class="collapsible-header">I have a debt in the bank and will the amount be deducted??
+                    <div class="collapsible-header">I have a debt in the bank and will the amount be deducted?
                     </div>
                     <div class="collapsible-content">
                         <p>👉 No bank can deduct the amount from our card.</p>
                     </div>
                 </div>
                 <div class="collapsible-section">
-                    <div class="collapsible-header">There is a seizure in the bank and I will be able to use the card?
+                    <div class="collapsible-header">Is there a seizure in the bank and will I be able to use the card?
                     </div>
                     <div class="collapsible-content problemContainer">
                         <p>✅ If you have a problem with the bank or a delay,
@@ -277,19 +340,12 @@
                     </div>
                 </div>
                 <div class="collapsible-section">
-                    <div class="collapsible-header">How can I withdraw money??</div>
+                    <div class="collapsible-header">How can I withdraw money?</div>
                     <div class="collapsible-content">
                         <p>💸 With the existing card, you will be able to withdraw money at any time, from any place.
                         </p>
                     </div>
                 </div>
-
-            </div>
-
-            <img src="assets/cards.png" class="cardImg" width="400px" alt="">
-
-
-            <div class="questions-container">
                 <div class="collapsible-section">
                     <div class="collapsible-header">How can I get the money?</div>
                     <div class="collapsible-content">
@@ -299,13 +355,13 @@
                     </div>
                 </div>
                 <div class="collapsible-section">
-                    <div class="collapsible-header">Who can use the card??</div>
+                    <div class="collapsible-header">Who can use the card?</div>
                     <div class="collapsible-content">
-                        <p>Drivers registered in Yandex Comfort will be able to use the card</p>
+                        <p>🫂Drivers registered in GS Tbilisi will be able to use the card</p>
                     </div>
                 </div>
                 <div class="collapsible-section">
-                    <div class="collapsible-header">What are the card fees??</div>
+                    <div class="collapsible-header">What are the card fees?</div>
                     <div class="collapsible-content">
                         <p>🙌The card will be delivered to you completely free of charge.</p>
                     </div>
@@ -318,7 +374,7 @@
     </section>
 
 
-    <footer class="footer">
+    <footer class="footer" id="footer">
         <div class="main-links-footer">
             <a href="#">Home</a>
             <a href="#">Service</a>
