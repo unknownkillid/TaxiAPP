@@ -114,6 +114,8 @@ function changeLanguage() {
 
   if (urls[language]) {
     window.location.href = urls[language];
+    console.log(language);
+    
   }
 }
 
@@ -151,7 +153,7 @@ document.querySelectorAll('.clicable-linkBurger').forEach(clickable => {
 })
 
 function changeLanguageBurger() {
-  const language = document.querySelectorAll(".language-selection").value;
+  const language = document.getElementById("languageBurger").value;
 
   const urls = {
     "GE": "index.html",
