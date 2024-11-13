@@ -8,7 +8,6 @@ app.use(bodyParser.urlencoded({ extended: true })); // For form data
 // Connect to MongoDB
 mongoose.connect('mongodb+srv://david:89CyjVE4LV7yLVpL@taxi.hs5jn.mongodb.net/?retryWrites=true&w=majority&appName=Taxi', {
    useNewUrlParser: true,
-   useUnifiedTopology: true,
 }).then(() => console.log('MongoDB connected'))
   .catch(err => console.error('MongoDB connection error:', err));
 
