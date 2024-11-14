@@ -165,3 +165,36 @@ function changeLanguageBurger() {
     window.location.href = urls[language];
   }
 }
+
+function registerTaxi() {
+
+}
+
+function reigsterCourier() {
+
+}
+
+document.querySelector(".registerForm").addEventListener("submit", async function (event) {
+  event.preventDefault();
+
+  const formData = new FormData(this);
+  let data = Object.fromEntries(formData.entries()); // Convert form data to an object
+
+  // Wrap data under "taxi" if your backend expects this structure
+  data = { taxi: data };
+
+  try {
+    const response = await fetch("http://localhost:3000/taxi/reg", { // Fixed port number (3000) for API
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+
+    const result = await response.json();
+    console.log(result); // Response from the backend
+  } catch (error) {
+    console.error("Error:", error);
+  }
+});

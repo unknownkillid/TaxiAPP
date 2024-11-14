@@ -166,36 +166,36 @@
                 <h3 id="taxiChoose">ტაქსი</h3>
                 <h3 id="courierChoose">კურიერი</h3>
             </div>
-            <form action="http://localhost:3000/register/taxi" method="POST" class="registerForm" id="registerFormID">
+            <form class="registerForm" id="registerFormID">
                 <div class="registerFormInputs" id="registerFormInputs">
                     <div class="input-group">
                         <label for="nameInput" class="labelAnimation">სახელი და გვარი</label>
-                        <input type="text" class="nameInput" id="nameInput" required>
+                        <input type="text" name="fullName" class="nameInput" id="nameInput" required>
                     </div>
 
                     <div class="input-group">
                         <label for="telNumber" class="labelAnimation">ტელ. ნომერი</label>
-                        <input type="tel" class="tel-Number" id="telNumber" required>
+                        <input type="tel" name="phoneNumber" class="tel-Number" id="telNumber" required>
                     </div>
 
                     <div class="input-group">
                         <label for="licNumber" class="labelAnimation">მართვის მოწმობის სერია და ნომერი</label>
-                        <input type="text" class="lic-num" id="licNumber" required>
+                        <input type="text" name="licenseNumber" class="lic-num" id="licNumber" required>
                     </div>
 
                     <div class="input-group">
                         <label for="date" class="labelAnimation">გაცემის თარიღი</label>
-                        <input type="date" class="date" id="date" required>
+                        <input type="date" name="issueDate" class="date" id="date" required>
                     </div>
 
                     <div class="input-group">
                         <label for="valid" class="labelAnimation">მოქმედების ვადა</label>
-                        <input type="date" class="validation" id="valid" required>
+                        <input type="date" name="validUntil" class="validation" id="valid" required>
                     </div>
 
                     <div class="input-group">
                         <label for="carModel" class="labelAnimation">ავტომობილის მოდელი</label>
-                        <input type="text" class="model" id="carModel" required>
+                        <input type="text" name="carModel" class="model" id="carModel" required>
                     </div>
 
                     <div class="input-group">
@@ -220,12 +220,12 @@
 
                     <div class="input-group">
                         <label for="releaseDate" class="labelAnimation">ავტომობილის გამოშვების წელი</label>
-                        <input type="number" class="release-date" id="releaseDate" required>
+                        <input type="number" name="releaseYear" min="1900" max="2100" class="release-date" id="releaseDate" required>
                     </div>
 
                     <div class="input-group">
                         <label for="regionNumber" class="labelAnimation">ავტომობილის სახელმწიფო ნომერი</label>
-                        <input type="text" class="reg-number" id="regionNumber" required>
+                        <input type="text" name="registrationNumber" class="reg-number" id="regionNumber" required>
                     </div>
 
                     <div class="input-group">
