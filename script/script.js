@@ -249,15 +249,19 @@ async function handleFormSubmit(event, endpoint, dataWrapperKey) {
 }
 
 // Attach event listeners for both forms
-document.querySelector(".registerForm").addEventListener("submit", function (event) {
-  handleFormSubmit(event, "taxi", "taxi");
-  resContaienr.classList.add('resContainerShow')
-});
+document.querySelectorAll(".registerForm").forEach(registerForms => {
+  registerForms.addEventListener("submit", function (event) {
+    handleFormSubmit(event, "taxi", "taxi");
+    resContaienr.classList.add('resContainerShow')
+  });
+})
 
-document.querySelector(".courierForm").addEventListener("submit", function (event) {
-  handleFormSubmit(event, "courier", "courier");
-  resContaienr.classList.add('resContainerShow')
-});
+document.querySelectorAll(".courierForm").forEach(courierRegForm => {
+  courierRegForm.addEventListener("submit", function (event) {
+    handleFormSubmit(event, "courier", "courier");
+    resContaienr.classList.add('resContainerShow')
+  });
+})
 
 
 const resButton = document.querySelectorAll('.resbutton')

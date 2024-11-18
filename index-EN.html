@@ -159,6 +159,13 @@
     </section>
 
     <section class="section2" id="section2">
+        <div class="responsee" id="response">
+            <div class="responseContainer" id="resContainer">
+                <h1 id="iconSucBack"></h1>
+                <h1 class="responseh1" id="responseh1"></h1>
+                <button class="regButton resbutton" id="responseButton">გასაგებია</button>
+            </div>
+        </div>
         <h1>Register!</h1>
         <div class="driver-reg" id="driverReg">
             <div class="choose">
@@ -166,112 +173,116 @@
                 <h3 id="taxiChoose">Taxi</h3>
                 <h3 id="courierChoose">Courier</h3>
             </div>
-            <form action="#" class="registerForm" id="registerFormID">
+            <form class="registerForm" id="registerFormID">
                 <div class="registerFormInputs" id="registerFormInputs">
                     <div class="input-group">
-                        <label for="nameInput" class="labelAnimation">Full Name</label>
-                        <input type="text" class="nameInput" id="nameInput" required>
+                        <label for="nameInput" class="labelAnimation">სახელი და გვარი*</label>
+                        <input type="text" name="fullName" class="nameInput" id="nameInput" required>
                     </div>
 
                     <div class="input-group">
-                        <label for="telNumber" class="labelAnimation">Mobile Number</label>
-                        <input type="tel" class="tel-Number" id="telNumber" required>
+                        <label for="telNumber" class="labelAnimation">ტელ. ნომერი*</label>
+                        <input type="tel" name="phoneNumber" class="tel-Number" id="telNumber" required>
                     </div>
 
                     <div class="input-group">
-                        <label for="licNumber" class="labelAnimation">Driver's license series and number</label>
-                        <input type="text" class="lic-num" id="licNumber" required>
+                        <label for="licNumber" class="labelAnimation" id="licLabel">მართვის მოწმობის სერია და
+                            ნომერი*</label>
+                        <input type="text" name="licenseNumber" class="lic-num" id="licNumber" pattern=".{9}"
+                            title="უნდა შედგებოდეს 9 სიმბოლოსგან" required>
+                    </div>
+
+
+                    <div class="input-group">
+                        <label for="date" class="labelAnimation">გაცემის თარიღი*</label>
+                        <input type="date" name="issueDate" class="date" id="date" required>
                     </div>
 
                     <div class="input-group">
-                        <label for="date" class="labelAnimation">Issue date</label>
-                        <input type="date" class="date" id="date" required>
+                        <label for="valid" class="labelAnimation">მოქმედების ვადა*</label>
+                        <input type="date" name="validUntil" class="validation" id="valid" required>
                     </div>
 
                     <div class="input-group">
-                        <label for="valid" class="labelAnimation">Validity period</label>
-                        <input type="date" class="validation" id="valid" required>
+                        <label for="carModel" class="labelAnimation">ავტომობილის მოდელი*</label>
+                        <input type="text" name="carModel" class="model" id="carModel" required>
                     </div>
 
                     <div class="input-group">
-                        <label for="carModel" class="labelAnimation">Car model</label>
-                        <input type="text" class="model" id="carModel" required>
-                    </div>
-
-                    <div class="input-group">
-                        <label for="carColorChoose">Car color</label>
+                        <label for="carColorChoose">ავტომობილის ფერი*</label>
                         <select name="carColor" id="carColorChoose" required>
-                            <option selected disabled>Select</option>
-                            <option value="White">White</option>
-                            <option value="Black">Black</option>
-                            <option value="Brown">Brown</option>
-                            <option value="Red">Red</option>
-                            <option value="Purple">Purple</option>
-                            <option value="Yellow">Yellow</option>
-                            <option value="Green">Green</option>
-                            <option value="Blue">Blue</option>
-                            <option value="Violet">Violet</option>
-                            <option value="Gray">Gray</option>
-                            <option value="LightBlue">Light Blue</option>
-                            <option value="Pink">Pink</option>
-                            <option value="Beige">Beige</option>
+                            <option disabled selected>აირჩიეთ</option>
+                            <option value="White">თეთრი</option>
+                            <option value="Black">შავი</option>
+                            <option value="Brown">ყავისფერი</option>
+                            <option value="Red">წითელი</option>
+                            <option value="Purple">იასამნისფერი</option>
+                            <option value="Yellow">ყვითელი</option>
+                            <option value="Green">მწვანე</option>
+                            <option value="Blue">ლურჯი</option>
+                            <option value="Violet">იისფერი</option>
+                            <option value="Gray">რუხი</option>
+                            <option value="LightBlue">ცისფერი</option>
+                            <option value="Pink">ვარდისფერი</option>
+                            <option value="Beige">ბეჟი</option>
                         </select>
                     </div>
 
                     <div class="input-group">
-                        <label for="releaseDate" class="labelAnimation">Year of release of the vehicle</label>
-                        <input type="number" class="release-date" id="releaseDate" required>
+                        <label for="releaseDate" class="labelAnimation">ავტომობილის გამოშვების წელი*</label>
+                        <input type="number" name="releaseYear" min="1900" max="2100" class="release-date"
+                            id="releaseDate" required>
                     </div>
 
                     <div class="input-group">
-                        <label for="regionNumber" class="labelAnimation">Vehicle state number</label>
-                        <input type="text" class="reg-number" id="regionNumber" required>
+                        <label for="regionNumber" class="labelAnimation">ავტომობილის სახელმწიფო ნომერი*</label>
+                        <input type="text" name="registrationNumber" class="reg-number" id="regionNumber" required>
                     </div>
 
                     <div class="input-group">
-                        <label for="cityChoose">City</label>
+                        <label for="cityChoose">ქალაქი*</label>
 
                         <select name="city" id="cityChoose" required>
-                            <option selected disabled>Select</option>
-                            <option value="Tbilisi">Tbilisi</option>
-                            <option value="Batumi">Batumi</option>
-                            <option value="Kutaisi">Kutaisi</option>
+                            <option selected disabled>აირჩიეთ</option>
+                            <option value="Tbilisi">თბილისი</option>
+                            <option value="Batumi">ბათუმი</option>
+                            <option value="Kutaisi">ქუთაისი</option>
                         </select>
                     </div>
                 </div>
-                <button class="regButton" id="taxiRegisterButton">Register</button>
+                <button class="regButton" id="taxiRegisterButton">რეგისტრაცია</button>
 
         </div>
 
         </form>
 
-        <form action="#" class="courierForm" id="courierFormID">
+        <form class="courierForm" id="courierFormID">
             <div class="input-group">
-                <label for="nameInput" class="labelAnimation">Full Name</label>
-                <input type="text" class="nameInput" id="nameInput" required>
+                <label for="nameInput" class="labelAnimation">სახელი და გვარი</label>
+                <input type="text" name="fullName" class="nameInput" id="nameInput" required>
             </div>
 
             <div class="input-group">
-                <label for="telNumber" class="labelAnimation">Mobile Number</label>
-                <input type="tel" class="tel-Number" id="telNumber" required>
+                <label for="telNumber" class="labelAnimation">ტელ. ნომერი</label>
+                <input type="tel" name="phoneNumber" class="tel-Number" id="telNumber" required>
             </div>
 
             <div class="input-group">
-                <label for="regionNumber" class="labelAnimation">Vehicle state number</label>
-                <input type="text" class="reg-number" id="regionNumber" required>
+                <label for="regionNumber" class="labelAnimation">ავტომობილის სახელმწიფო ნომერი</label>
+                <input type="text" name="licenseNumber" class="reg-number" id="regionNumber" required>
             </div>
 
             <div class="input-group">
-                <label for="cityChoose">City</label>
+                <label for="cityChoose">ქალაქი</label>
 
                 <select name="city" id="cityChoose" required>
-                    <option selected disabled>Select</option>
-                    <option value="Tbilisi">Tbilisi</option>
-                    <option value="Batumi">Batumi</option>
-                    <option value="Kutaisi">Kutaisi</option>
+                    <option selected disabled>აირჩიეთ</option>
+                    <option value="Tbilisi">თბილისი</option>
+                    <option value="Batumi">ბათუმი</option>
+                    <option value="Kutaisi">ქუთაისი</option>
                 </select>
             </div>
-            <button class="regButton" id="courierRegisterButton">Register</button>
+            <button class="regButton" id="courierRegisterButton">რეგისტრაცია</button>
 
         </form>
 
