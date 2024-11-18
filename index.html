@@ -159,6 +159,13 @@
     </section>
 
     <section class="section2" id="section2">
+        <div class="responsee" id="response">
+            <div class="responseContainer" id="resContainer">
+                <h1 id="iconSucBack"></h1>
+                <h1 class="responseh1" id="responseh1"></h1>
+                <button class="regButton resbutton" id="responseButton">გასაგებია</button>
+            </div>
+        </div>
         <h1>რეგისტრაცია!</h1>
         <div class="driver-reg" id="driverReg">
             <div class="choose">
@@ -166,40 +173,49 @@
                 <h3 id="taxiChoose">ტაქსი</h3>
                 <h3 id="courierChoose">კურიერი</h3>
             </div>
+            
             <form class="registerForm" id="registerFormID">
                 <div class="registerFormInputs" id="registerFormInputs">
                     <div class="input-group">
-                        <label for="nameInput" class="labelAnimation">სახელი და გვარი</label>
+                        <label for="nameInput" class="labelAnimation">სახელი და გვარი*</label>
                         <input type="text" name="fullName" class="nameInput" id="nameInput" required>
                     </div>
 
                     <div class="input-group">
-                        <label for="telNumber" class="labelAnimation">ტელ. ნომერი</label>
+                        <label for="telNumber" class="labelAnimation">ტელ. ნომერი*</label>
                         <input type="tel" name="phoneNumber" class="tel-Number" id="telNumber" required>
                     </div>
 
                     <div class="input-group">
-                        <label for="licNumber" class="labelAnimation">მართვის მოწმობის სერია და ნომერი</label>
-                        <input type="text" name="licenseNumber" class="lic-num" id="licNumber" required>
+                        <label for="licNumber" class="labelAnimation" id="licLabel">მართვის მოწმობის სერია და ნომერი*</label>
+                        <input 
+                            type="text" 
+                            name="licenseNumber" 
+                            class="lic-num" 
+                            id="licNumber" 
+                            pattern=".{9}" 
+                            title="უნდა შედგებოდეს 9 სიმბოლოსგან" 
+                            required>
                     </div>
+                    
 
                     <div class="input-group">
-                        <label for="date" class="labelAnimation">გაცემის თარიღი</label>
+                        <label for="date" class="labelAnimation">გაცემის თარიღი*</label>
                         <input type="date" name="issueDate" class="date" id="date" required>
                     </div>
 
                     <div class="input-group">
-                        <label for="valid" class="labelAnimation">მოქმედების ვადა</label>
+                        <label for="valid" class="labelAnimation">მოქმედების ვადა*</label>
                         <input type="date" name="validUntil" class="validation" id="valid" required>
                     </div>
 
                     <div class="input-group">
-                        <label for="carModel" class="labelAnimation">ავტომობილის მოდელი</label>
+                        <label for="carModel" class="labelAnimation">ავტომობილის მოდელი*</label>
                         <input type="text" name="carModel" class="model" id="carModel" required>
                     </div>
 
                     <div class="input-group">
-                        <label for="carColorChoose">ავტომობილის ფერი</label>
+                        <label for="carColorChoose">ავტომობილის ფერი*</label>
                         <select name="carColor" id="carColorChoose" required>
                             <option disabled selected>აირჩიეთ</option>
                             <option value="White">თეთრი</option>
@@ -219,17 +235,17 @@
                     </div>
 
                     <div class="input-group">
-                        <label for="releaseDate" class="labelAnimation">ავტომობილის გამოშვების წელი</label>
+                        <label for="releaseDate" class="labelAnimation">ავტომობილის გამოშვების წელი*</label>
                         <input type="number" name="releaseYear" min="1900" max="2100" class="release-date" id="releaseDate" required>
                     </div>
 
                     <div class="input-group">
-                        <label for="regionNumber" class="labelAnimation">ავტომობილის სახელმწიფო ნომერი</label>
+                        <label for="regionNumber" class="labelAnimation">ავტომობილის სახელმწიფო ნომერი*</label>
                         <input type="text" name="registrationNumber" class="reg-number" id="regionNumber" required>
                     </div>
 
                     <div class="input-group">
-                        <label for="cityChoose">ქალაქი</label>
+                        <label for="cityChoose">ქალაქი*</label>
 
                         <select name="city" id="cityChoose" required>
                             <option selected disabled>აირჩიეთ</option>
@@ -245,20 +261,20 @@
 
         </form>
 
-        <form action="http://localhost:3000/register/courier" method="POST" class="courierForm" id="courierFormID">
+        <form class="courierForm" id="courierFormID">
             <div class="input-group">
                 <label for="nameInput" class="labelAnimation">სახელი და გვარი</label>
-                <input type="text" class="nameInput" id="nameInput" required>
+                <input type="text" name="fullName" class="nameInput" id="nameInput" required>
             </div>
 
             <div class="input-group">
                 <label for="telNumber" class="labelAnimation">ტელ. ნომერი</label>
-                <input type="tel" class="tel-Number" id="telNumber" required>
+                <input type="tel" name="phoneNumber" class="tel-Number" id="telNumber" required>
             </div>
 
             <div class="input-group">
                 <label for="regionNumber" class="labelAnimation">ავტომობილის სახელმწიფო ნომერი</label>
-                <input type="text" class="reg-number" id="regionNumber" required>
+                <input type="text" name="licenseNumber" class="reg-number" id="regionNumber" required>
             </div>
 
             <div class="input-group">
@@ -398,6 +414,8 @@
 
     <script src="script/script.js"></script>
     <script type="module" src="node_modules/vanilla-tilt/src/vanilla-tilt.js"></script>
+
+
 
 
 </body>

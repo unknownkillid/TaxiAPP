@@ -1,4 +1,5 @@
 const images = [];
+
 for (let i = 1; i <= 3; i++) {
   images[i] = new Image();
   images[i].src = `./assets/carousel/${i}.jpg`;
@@ -115,7 +116,7 @@ function changeLanguage() {
   if (urls[language]) {
     window.location.href = urls[language];
     console.log(language);
-    
+
   }
 }
 
@@ -166,25 +167,23 @@ function changeLanguageBurger() {
   }
 }
 
-function registerTaxi() {
 
-}
-
-function reigsterCourier() {
-
-}
-
-document.querySelector(".registerForm").addEventListener("submit", async function (event) {
+const resContaienr = document.getElementById('response')
+// Reusable function for handling form submissions
+async function handleFormSubmit(event, endpoint, dataWrapperKey) {
   event.preventDefault();
 
-  const formData = new FormData(this);
-  let data = Object.fromEntries(formData.entries()); // Convert form data to an object
+  const formData = new FormData(event.target);
+  let data = Object.fromEntries(formData.entries());
 
-  // Wrap data under "taxi" if your backend expects this structure
-  data = { taxi: data };
+  // Wrap data under the specified key (e.g., "taxi" or "courier")
+  data = { [dataWrapperKey]: data };
+
+  const errElement = document.querySelector(".responseh1");
+  errElement.textContent = ""; // Clear previous messages
 
   try {
-    const response = await fetch("http://localhost:3000/taxi/reg", { // Fixed port number (3000) for API
+    const response = await fetch(`http://localhost:3000/${endpoint}/reg`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -192,9 +191,95 @@ document.querySelector(".registerForm").addEventListener("submit", async functio
       body: JSON.stringify(data),
     });
 
-    const result = await response.json();
-    console.log(result); // Response from the backend
+    let result;
+    const contentType = response.headers.get("content-type");
+
+    // Parse the response based on its content type
+    if (contentType && contentType.includes("application/json")) {
+      result = await response.json();
+    } else {
+      result = await response.text();
+    }
+
+    console.log("Response:", result);
+
+    // Handle JSON object with an error property
+    let message = "";
+    if (result && typeof result === "object" && result.error) {
+      // If server returns { error: "some message" }
+      message = result.error;
+    } else if (typeof result === "string") {
+      // Handle string responses
+      if (result.includes("already registered")) {
+        message = `${endpoint.charAt(0).toUpperCase() + endpoint.slice(1)} already registered`;
+      } else if (result.includes("saved successfully")) {
+        message = `${endpoint.charAt(0).toUpperCase() + endpoint.slice(1)} registration saved successfully`;
+      } else {
+        message = result;
+      }
+    } else if (result.success) {
+      message = `${endpoint.charAt(0).toUpperCase() + endpoint.slice(1)} registered successfully`;
+    }
+
+    // Display the message in the .err element
+    errElement.textContent = message;
+
+    // Reset the form if registration was successful
+    if (message.toLowerCase().includes("success")) {
+      event.target.reset();
+    }
   } catch (error) {
     console.error("Error:", error);
+
+    // Custom error handling based on the error type
+    let errorMessage = "An unexpected error occurred";
+    if (error.message.includes("NetworkError")) {
+      errorMessage = "Network error: Unable to reach the server";
+    } else if (error.message.includes("already")) {
+      errorMessage = `${endpoint.charAt(0).toUpperCase() + endpoint.slice(1)} already registered`;
+    } else if (error.message.includes('"phoneNumber" with value')) {
+      errorMessage = "Phone number must be 9 digits";
+    } else if (error.message) {
+      errorMessage = error.message;
+    }
+
+    // Display the error message
+    errElement.textContent = errorMessage;
+  }
+}
+
+// Attach event listeners for both forms
+document.querySelector(".registerForm").addEventListener("submit", function (event) {
+  handleFormSubmit(event, "taxi", "taxi");
+  resContaienr.classList.add('resContainerShow')
+});
+
+document.querySelector(".courierForm").addEventListener("submit", function (event) {
+  handleFormSubmit(event, "courier", "courier");
+  resContaienr.classList.add('resContainerShow')
+});
+
+
+const resButton = document.querySelectorAll('.resbutton')
+
+resButton.forEach(resButtonClicked => {
+  resButtonClicked.addEventListener('click', () => {
+    resContaienr.classList.remove('resContainerShow')
+  })
+})
+
+const licenseInput = document.getElementById('licNumber');
+const licenseLabel = document.getElementById('licLabel');
+
+const taxiRegisterButton = document.getElementById('taxiRegisterButton')
+
+taxiRegisterButton.addEventListener('click', () => {
+  if (!licenseInput.validity.valid) {
+    licenseLabel.classList.add('validationReds');
+    licenseLabel.classList.remove('validGreen');
+
+  } else {
+    licenseLabel.classList.add('validGreen');
+    licenseLabel.classList.remove('validationReds');
   }
 });

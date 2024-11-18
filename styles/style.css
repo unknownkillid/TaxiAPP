@@ -774,6 +774,45 @@ form {
     color: rgb(175, 56, 175) !important;
 }
 
+.responsee {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.589);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 200;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.responseContainer {
+    width: 500px;
+    height: 300px;
+    background-color: var(--main-black);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 30px;
+    text-align: center;
+}   
+
+.resContainerShow {
+    display: flex;
+}
+
+.validationReds {
+    color: red;
+}
+
+.validGreen {
+    color: green;
+}
+
 /* responsives  */
 
 @media screen and (max-width: 1333px) {
