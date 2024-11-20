@@ -1029,3 +1029,52 @@ form {
     }
 }
 
+/* pannel  */
+
+
+.panelSec {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--main-black);
+}
+
+.linksPanel {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    color: white;
+}
+
+.linksPanel h1 {
+    cursor: pointer;
+}
+
+.panel-header {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+    height: 60px;
+    border-bottom: 1px solid white;
+}
+
+.main-content-panel-taxi {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: calc(100% - 7%);
+    background-color: crimson;
+    justify-content: center;
+    gap: 20px;
+}
+
+.taxi-item {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid white;
+}

@@ -169,18 +169,16 @@ function changeLanguageBurger() {
 
 
 const resContaienr = document.getElementById('response')
-// Reusable function for handling form submissions
 async function handleFormSubmit(event, endpoint, dataWrapperKey) {
   event.preventDefault();
 
   const formData = new FormData(event.target);
   let data = Object.fromEntries(formData.entries());
 
-  // Wrap data under the specified key (e.g., "taxi" or "courier")
   data = { [dataWrapperKey]: data };
 
   const errElement = document.querySelector(".responseh1");
-  errElement.textContent = ""; // Clear previous messages
+  errElement.textContent = "";
 
   try {
     const response = await fetch(`http://localhost:3000/${endpoint}/reg`, {
@@ -194,7 +192,6 @@ async function handleFormSubmit(event, endpoint, dataWrapperKey) {
     let result;
     const contentType = response.headers.get("content-type");
 
-    // Parse the response based on its content type
     if (contentType && contentType.includes("application/json")) {
       result = await response.json();
     } else {
@@ -203,13 +200,10 @@ async function handleFormSubmit(event, endpoint, dataWrapperKey) {
 
     console.log("Response:", result);
 
-    // Handle JSON object with an error property
     let message = "";
     if (result && typeof result === "object" && result.error) {
-      // If server returns { error: "some message" }
       message = result.error;
     } else if (typeof result === "string") {
-      // Handle string responses
       if (result.includes("already registered")) {
         message = `${endpoint.charAt(0).toUpperCase() + endpoint.slice(1)} already registered`;
       } else if (result.includes("saved successfully")) {
@@ -221,17 +215,14 @@ async function handleFormSubmit(event, endpoint, dataWrapperKey) {
       message = `${endpoint.charAt(0).toUpperCase() + endpoint.slice(1)} registered successfully`;
     }
 
-    // Display the message in the .err element
     errElement.textContent = message;
 
-    // Reset the form if registration was successful
     if (message.toLowerCase().includes("success")) {
       event.target.reset();
     }
   } catch (error) {
     console.error("Error:", error);
 
-    // Custom error handling based on the error type
     let errorMessage = "An unexpected error occurred";
     if (error.message.includes("NetworkError")) {
       errorMessage = "Network error: Unable to reach the server";
@@ -243,12 +234,10 @@ async function handleFormSubmit(event, endpoint, dataWrapperKey) {
       errorMessage = error.message;
     }
 
-    // Display the error message
     errElement.textContent = errorMessage;
   }
 }
 
-// Attach event listeners for both forms
 document.querySelectorAll(".registerForm").forEach(registerForms => {
   registerForms.addEventListener("submit", function (event) {
     handleFormSubmit(event, "taxi", "taxi");
@@ -262,6 +251,7 @@ document.querySelectorAll(".courierForm").forEach(courierRegForm => {
     resContaienr.classList.add('resContainerShow')
   });
 })
+
 
 
 const resButton = document.querySelectorAll('.resbutton')
