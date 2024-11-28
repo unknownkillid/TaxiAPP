@@ -222,7 +222,6 @@ async function handleFormSubmit(event, endpoint, dataWrapperKey) {
     }
   } catch (error) {
     console.error("Error:", error);
-
     let errorMessage = "An unexpected error occurred";
     if (error.message.includes("NetworkError")) {
       errorMessage = "Network error: Unable to reach the server";

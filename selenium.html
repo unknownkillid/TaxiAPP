@@ -11,61 +11,126 @@
 </head>
 
 <body>
-
-
     <section class="panelSec">
         <header class="panel-header">
             <div class="linksPanel">
-                <h1>ტაქსი</h1>
-                <h1>კურიერი</h1>
+                <h1 id="taxiHeader">ტაქსი</h1>
+                <h1 id="courierHeader">კურიერი</h1>
             </div>
 
-            <input type="number" placeholder="Search Number">
+            <input type="number" placeholder="Search Number" id="search">
         </header>
 
         <form class="main-content-panel-taxi" id="taxiFormAdminPanel">
-
         </form>
     </section>
-
-
 </body>
 
-
 <script>
+    let taxis = [];
+    let couriers = [];
+    let isTaxiView = true;
+
     async function fetchTaxiData() {
         try {
             const response = await fetch('http://localhost:3000/taxi/list');
             if (!response.ok) throw new Error('Failed to fetch taxi data');
-            
-            const taxis = await response.json();
 
-            const form = document.getElementById('taxiFormAdminPanel');
-            form.innerHTML = ''; 
-
-            taxis.forEach(taxi => {
-                const div = document.createElement('div');
-                div.classList.add('taxi-item');
-                div.innerHTML = `
-                    <p>ID: ${taxi._id}</p>
-                    <p>სახელი: ${taxi.fullName || 'N/A'}</p>
-                    <p>ტელ. ნომერი: ${taxi.phoneNumber || 'N/A'}</p>
-                    <p>გაცემის თარიღი: ${taxi.issueDate || 'N/A'}</p>
-                    <p>მოქმედების ვადა: ${taxi.validUntil || 'N/A'}</p>
-                    <p>მანქანის მოდელი: ${taxi.carModel || 'N/A'}</p>
-                    <p>მანქანის ფერი: ${taxi.carColor || 'N/A'}</p>
-                    <p>მანქანის წელი: ${taxi.releaseYear || 'N/A'}</p>
-                    <p>მანქანის ნომერი: ${taxi.registrationNumber || 'N/A'}</p>
-                    <p>ქალაქი: ${taxi.city || 'N/A'}</p>
-                `;
-                form.appendChild(div);
-            });
+            taxis = await response.json(); 
+            if (isTaxiView) {
+                displayTaxis(taxis); 
+            }
         } catch (err) {
             console.error(err.message);
         }
     }
 
-    document.addEventListener('DOMContentLoaded', fetchTaxiData);
+    async function fetchCourierData() {
+        try {
+            const response = await fetch('http://localhost:3000/courier/list');
+            if (!response.ok) throw new Error('Failed to fetch courier data');
+
+            couriers = await response.json(); 
+            if (!isTaxiView) {
+                displayCouriers(couriers); 
+            }
+        } catch (err) {
+            console.error(err.message);
+        }
+    }
+
+    function displayTaxis(taxisToDisplay) {
+        const form = document.getElementById('taxiFormAdminPanel');
+        form.innerHTML = '';
+
+        taxisToDisplay.forEach(taxi => {
+            const div = document.createElement('div');
+            div.classList.add('taxi-item');
+            div.innerHTML = `
+                <p>სახელი: ${taxi.fullName || 'N/A'}</p>
+                <p>ტელ. ნომერი: ${taxi.phoneNumber || 'N/A'}</p>
+                <p>მოწმობის ნომერი: ${taxi.licenseNumber || 'N/A'}</p>
+                <p>გაცემის თარიღი: ${taxi.issueDate || 'N/A'}</p>
+                <p>მოქმედების ვადა: ${taxi.validUntil || 'N/A'}</p>
+                <p>მანქანის მოდელი: ${taxi.carModel || 'N/A'}</p>
+                <p>მანქანის ფერი: ${taxi.carColor || 'N/A'}</p>
+                <p>მანქანის წელი: ${taxi.releaseYear || 'N/A'}</p>
+                <p>მანქანის ნომერი: ${taxi.registrationNumber || 'N/A'}</p>
+                <p>ქალაქი: ${taxi.city || 'N/A'}</p>
+            `;
+            form.appendChild(div);
+        });
+    }
+
+    function displayCouriers(couriersToDisplay) {
+        const form = document.getElementById('taxiFormAdminPanel');
+        form.innerHTML = '';
+
+        couriersToDisplay.forEach(courier => {
+            const div = document.createElement('div');
+            div.classList.add('courier-item');
+            div.innerHTML = `
+                <p>სახელი: ${courier.fullName || 'N/A'}</p>
+                <p>ტელ. ნომერი: ${courier.phoneNumber || 'N/A'}</p>
+                <p>მოწმობის ნომერი: ${courier.licenseNumber || 'N/A'}</p>
+                <p>ქალაქი: ${courier.city || 'N/A'}</p>
+            `;
+            div.classList.add('taxi-item');
+
+            form.appendChild(div);
+        });
+    }
+
+    document.getElementById('taxiHeader').addEventListener('click', () => {
+        isTaxiView = true;
+        fetchTaxiData();
+        document.getElementById('taxiHeader').classList.add('active');
+        document.getElementById('courierHeader').classList.remove('active');
+    });
+
+    document.getElementById('courierHeader').addEventListener('click', () => {
+        isTaxiView = false;
+        fetchCourierData(); 
+        document.getElementById('courierHeader').classList.add('active');
+        document.getElementById('taxiHeader').classList.remove('active');
+    });
+
+    document.addEventListener('DOMContentLoaded', () => {
+        fetchTaxiData();
+        document.getElementById('taxiHeader').classList.add('active');
+    });
+
+    const searchInput = document.getElementById('search');
+    searchInput.addEventListener('input', () => {
+        const searchTerm = searchInput.value.trim().toLowerCase();
+        if (isTaxiView) {
+            const filteredTaxis = taxis.filter(taxi => taxi.phoneNumber && taxi.phoneNumber.includes(searchTerm));
+            displayTaxis(filteredTaxis);
+        } else {
+            const filteredCouriers = couriers.filter(courier => courier.phoneNumber && courier.phoneNumber.includes(searchTerm));
+            displayCouriers(filteredCouriers);
+        }
+    });
 </script>
 
 </html>

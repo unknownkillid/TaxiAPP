@@ -1036,6 +1036,7 @@ form {
     width: 100%;
     height: 100vh;
     background-color: var(--main-black);
+    overflow: auto;
 }
 
 .linksPanel {
@@ -1044,7 +1045,7 @@ form {
     align-items: center;
     justify-content: center;
     gap: 20px;
-    color: white;
+    color: rgb(207, 207, 207);
 }
 
 .linksPanel h1 {
@@ -1059,22 +1060,36 @@ form {
     justify-content: center;
     gap: 100px;
     height: 60px;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid rgb(94, 94, 94);
 }
 
 .main-content-panel-taxi {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
     width: 100%;
     height: calc(100% - 7%);
-    background-color: crimson;
-    justify-content: center;
+    background-color: var(--main-black);
     gap: 20px;
+    padding: 50px;
+    overflow: scroll;
 }
 
 .taxi-item {
     display: flex;
-    flex-direction: row;
-    border: 1px solid white;
+    flex-direction: column;
+    border: 1px solid rgb(80, 80, 80);
+    width: 400px;
+    height: auto;
+    gap: 20px;
+    align-items: start;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.taxi-item p {
+    color: rgb(184, 184, 184);
 }
